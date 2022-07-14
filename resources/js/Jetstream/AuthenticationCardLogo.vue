@@ -1,6 +1,6 @@
 <template>
     <Link :href="'/'">
-        <img class="w-16 h-16" :src="'/img/logo.png'" alt="Narayam Matrimony">
+        <img class="w-16 h-16" :src="'/img/logo.png'" alt="DKIT Suicide Analysis App">
     </Link>
 </template>
 

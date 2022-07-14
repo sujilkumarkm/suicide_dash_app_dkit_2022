@@ -90,7 +90,7 @@
                     <a href="{{route('clients.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-home"></i>
                         <p>
-                            Narayam Data
+                            DKIT Data
                         </p>
                     </a>
                 </li>

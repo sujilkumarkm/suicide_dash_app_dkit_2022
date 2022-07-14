@@ -1,3 +1,3 @@
 <template>
-    <img :src="'/img/logo.png'" alt="Narayam Matrimony">
+    <img :src="'/img/logo.png'" alt="DKIT Suicide Analysis App">
 </template>

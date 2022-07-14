@@ -22290,7 +22290,7 @@ var _hoisted_1 = ["src"];
 function render(_ctx, _cache) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
     src: '/img/logo.png',
-    alt: "Narayam Matrimony"
+    alt: "DKIT Suicide Analysis App"
   }, null, 8
   /* PROPS */
   , _hoisted_1);
@@ -22315,7 +22315,7 @@ var _hoisted_1 = ["src"];
 function render(_ctx, _cache) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
     src: '/img/logo.png',
-    alt: "Narayam Matrimony"
+    alt: "DKIT Suicide Analysis App"
   }, null, 8
   /* PROPS */
   , _hoisted_1);
@@ -22372,7 +22372,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
         "class": "w-16 h-16",
         src: '/img/logo.png',
-        alt: "Narayam Matrimony"
+        alt: "DKIT Suicide Analysis App"
       }, null, 8
       /* PROPS */
       , _hoisted_1)];
@@ -28341,7 +28341,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* STABLE_FRAGMENT */
   ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: '/img/logo.png',
-    alt: "Narayam Matrimony"
+    alt: "DKIT Suicide Analysis App"
   }, null, 8
   /* PROPS */
   , _hoisted_8)])])])], 64
