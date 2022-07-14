@@ -82,7 +82,7 @@
                     <a href="{{route('intern.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
-                            Matrimony Users
+                            Suicides Data
                         </p>
                     </a>
                 </li>
