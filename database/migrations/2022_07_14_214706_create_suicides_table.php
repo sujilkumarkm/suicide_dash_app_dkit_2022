@@ -18,10 +18,11 @@ class CreateSuicidesTable extends Migration
             $table->string('country')->nullable();
             $table->string('year')->nullable();
             $table->string('sex')->nullable();
+            $table->string('age')->nullable();
             $table->bigInteger('suicides')->nullable();
             $table->bigInteger('population')->nullable();
             $table->bigInteger('sucid_in_hundredk')->nullable();
-            $table->string('country-year')->nullable();
+            $table->string('country_year')->nullable();
             $table->bigInteger('yearly_gdp')->nullable();
             $table->bigInteger('gdp_per_capita')->nullable();
             $table->bigInteger('internetusers')->nullable();
@@ -37,7 +38,6 @@ class CreateSuicidesTable extends Migration
             $table->bigInteger('electricityacess')->nullable();
             $table->string('continent')->nullable();
             $table->string('country_code')->nullable();
-            $table->string('text')->nullable();
             $table->string('mobilesubscription')->nullable();
             $table->timestamps();
         });
