@@ -55,7 +55,7 @@ class InternController extends Controller
         $intern->email = $request->email;
         $intern->password = Hash::make($request->password);
         $intern->save();
-        return redirect()->route('intern.index')->with('success', 'Matrimony Successfully added');
+        return redirect()->route('intern.index')->with('success', 'Suicide Successfully added');
     }
     public function edit($id)
     {
@@ -81,7 +81,7 @@ class InternController extends Controller
         $intern->email = $request->email;
         $intern->update();
 
-        return redirect()->route('intern.index')->with('success','Matrimony updated successfully!');
+        return redirect()->route('intern.index')->with('success','Suicide updated successfully!');
     }
     public function destroy($id)
     {
@@ -92,6 +92,6 @@ class InternController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect()->route('intern.index')->with('success','Matrimony deleted successfully!');
+        return redirect()->route('intern.index')->with('success','Suicide deleted successfully!');
     }
 }
