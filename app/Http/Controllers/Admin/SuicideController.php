@@ -22,4 +22,11 @@ class SuicideController extends Controller
 
         return view('admin.suicide.index',['suicides'=>$suicides]);
     }
+    public function create()
+    {
+        if (! Gate::allows('suicide-create')) {
+            return abort(401);
+        }
+        return view('admin.suicide.create');
+    }
 }

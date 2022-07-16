@@ -1,7 +1,7 @@
 
 <x-form-layout>
 
-    @section('title','Add new Intern')
+    @section('title','Add new Suicide')
     @section('actionUrl')
         {{route('suicide.store')}}
     @endsection
@@ -14,27 +14,32 @@
 
         <div class="col-md-8 offset-md-2">
             <div class="form-group">
-                <label for="name" class="control-label">Name</label>
-                <input type="text" id="name" name="name" required class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" value="{{old('name')}}">
-                @if($errors->has('name'))
+                <label for="country" class="control-label">Country</label>
+                <input type="text" id="country" name="country" required class="form-control {{$errors->has('country') ? 'is-invalid' : ''}}" value="{{old('country')}}">
+                @if($errors->has('country'))
                     <span class="help-block error invalid-feedback">
-                        <strong>{{$errors->first('name')}}</strong>
+                        <strong>{{$errors->first('country')}}</strong>
                     </span>
                 @endif
             </div>
 
             <div class="form-group">
-                <label for="email" class="control-label">Email</label>
-                <input type="text" id="email" name="email" required class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" value="{{old('email')}}">
-                @if($errors->has('email'))
+                <label for="year" class="control-label">Year</label>
+                <input type="text" id="year" name="year" required class="form-control {{$errors->has('year') ? 'is-invalid' : ''}}" value="{{old('year')}}">
+                @if($errors->has('year'))
                     <span class="help-block error invalid-feedback">
-                        <strong>{{$errors->first('email')}}</strong>
+                        <strong>{{$errors->first('year')}}</strong>
                     </span>
                 @endif
             </div>
             <div class="form-group">
-                <label for="password" class="control-label">Password</label>
-                <input type="password" id="password" name="password" required class="form-control {{$errors->has('password') ? 'is-invalid' : ''}}" value="{{old('password')}}">
+                <label for="sex" class="control-label">Gender</label>
+                <select id="sex" name="sex" class="form-control {{$errors->has('sex') ? 'is-invalid' : ''}}">
+                    <option selected vlaue="">-- Choose --</option>
+                    <option vlaue="Male">Male</option>
+                    <option vlaue="Female">Female</option>
+                    <option vlaue="N/A">Not disclosed</option>
+                  </select>
                 @if($errors->has('password'))
                     <span class="help-block error invalid-feedback">
                         <strong>{{$errors->first('password')}}</strong>
@@ -42,14 +47,172 @@
                 @endif
             </div>
             <div class="form-group">
-                <label for="password_confirmation" class="control-label">Confirm Passeord</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" required class="form-control {{$errors->has('password_confirmation') ? 'is-invalid' : ''}}" value="{{old('password_confirmation')}}">
-                @if($errors->has('password_confirmation'))
+                <label for="age" class="control-label">Age</label>
+                <input type="text" id="age" name="age" required class="form-control {{$errors->has('age') ? 'is-invalid' : ''}}" value="{{old('age')}}">
+                @if($errors->has('age'))
                     <span class="help-block error invalid-feedback">
-                        <strong>{{$errors->first('password_confirmation')}}</strong>
+                        <strong>{{$errors->first('age')}}</strong>
                     </span>
                 @endif
             </div>
+            <div class="form-group">
+                <label for="suicides" class="control-label">Suicides</label>
+                <input type="text" id="suicides" name="suicides" required class="form-control {{$errors->has('suicides') ? 'is-invalid' : ''}}" value="{{old('suicides')}}">
+                @if($errors->has('suicides'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('suicides')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="population" class="control-label">Population</label>
+                <input type="text" id="population" name="population" required class="form-control {{$errors->has('population') ? 'is-invalid' : ''}}" value="{{old('population')}}">
+                @if($errors->has('population'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('population')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="sucid_in_hundredk" class="control-label">Suicide in Hundredk</label>
+                <input type="text" id="sucid_in_hundredk" name="sucid_in_hundredk" required class="form-control {{$errors->has('sucid_in_hundredk') ? 'is-invalid' : ''}}" value="{{old('sucid_in_hundredk')}}">
+                @if($errors->has('sucid_in_hundredk'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('sucid_in_hundredk')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="yearly_gdp" class="control-label">Yearly GDP</label>
+                <input type="text" id="yearly_gdp" name="yearly_gdp" required class="form-control {{$errors->has('yearly_gdp') ? 'is-invalid' : ''}}" value="{{old('yearly_gdp')}}">
+                @if($errors->has('yearly_gdp'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('yearly_gdp')}}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <div class="form-group">
+                <label for="gdp_per_capita" class="control-label">GDP Per Capita</label>
+                <input type="text" id="gdp_per_capita" name="gdp_per_capita" required class="form-control {{$errors->has('gdp_per_capita') ? 'is-invalid' : ''}}" value="{{old('gdp_per_capita')}}">
+                @if($errors->has('gdp_per_capita'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('gdp_per_capita')}}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <div class="form-group">
+                <label for="internetusers" class="control-label">Internet Users</label>
+                <input type="text" id="internetusers" name="internetusers" required class="form-control {{$errors->has('internetusers') ? 'is-invalid' : ''}}" value="{{old('internetusers')}}">
+                @if($errors->has('internetusers'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('internetusers')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="expenses" class="control-label">Expenses</label>
+                <input type="text" id="expenses" name="expenses" required class="form-control {{$errors->has('expenses') ? 'is-invalid' : ''}}" value="{{old('expenses')}}">
+                @if($errors->has('expenses'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('expenses')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="employeecompensation" class="control-label">Employee Compensation</label>
+                <input type="text" id="employeecompensation" name="employeecompensation" required class="form-control {{$errors->has('employeecompensation') ? 'is-invalid' : ''}}" value="{{old('employeecompensation')}}">
+                @if($errors->has('employeecompensation'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('employeecompensation')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="unemployment" class="control-label">Unemployment</label>
+                <input type="text" id="unemployment" name="unemployment" required class="form-control {{$errors->has('unemployment') ? 'is-invalid' : ''}}" value="{{old('unemployment')}}">
+                @if($errors->has('unemployment'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('unemployment')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="physician_price" class="control-label">Physician Price</label>
+                <input type="text" id="physician_price" name="physician_price" required class="form-control {{$errors->has('physician_price') ? 'is-invalid' : ''}}" value="{{old('physician_price')}}">
+                @if($errors->has('physician_price'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('physician_price')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="laborforcetotal" class="control-label">laborforcetotal</label>
+                <input type="text" id="laborforcetotal" name="laborforcetotal" required class="form-control {{$errors->has('laborforcetotal') ? 'is-invalid' : ''}}" value="{{old('laborforcetotal')}}">
+                @if($errors->has('laborforcetotal'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('laborforcetotal')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="lifeexpectancy" class="control-label">lifeexpectancy</label>
+                <input type="text" id="lifeexpectancy" name="lifeexpectancy" required class="form-control {{$errors->has('lifeexpectancy') ? 'is-invalid' : ''}}" value="{{old('lifeexpectancy')}}">
+                @if($errors->has('lifeexpectancy'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('lifeexpectancy')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="mobilesubscriptions" class="control-label">mobilesubscriptions</label>
+                <input type="text" id="mobilesubscriptions" name="mobilesubscriptions" required class="form-control {{$errors->has('mobilesubscriptions') ? 'is-invalid' : ''}}" value="{{old('mobilesubscriptions')}}">
+                @if($errors->has('mobilesubscriptions'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('mobilesubscriptions')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="refugees" class="control-label">refugees</label>
+                <input type="text" id="refugees" name="refugees" required class="form-control {{$errors->has('refugees') ? 'is-invalid' : ''}}" value="{{old('refugees')}}">
+                @if($errors->has('refugees'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('refugees')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="selfemployed" class="control-label">selfemployed</label>
+                <input type="text" id="selfemployed" name="selfemployed" required class="form-control {{$errors->has('selfemployed') ? 'is-invalid' : ''}}" value="{{old('selfemployed')}}">
+                @if($errors->has('selfemployed'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('selfemployed')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="electricityacess" class="control-label">electricityacess</label>
+                <input type="text" id="electricityacess" name="electricityacess" required class="form-control {{$errors->has('electricityacess') ? 'is-invalid' : ''}}" value="{{old('electricityacess')}}">
+                @if($errors->has('electricityacess'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('electricityacess')}}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="continent" class="control-label">continent</label>
+                <input type="text" id="continent" name="continent" required class="form-control {{$errors->has('continent') ? 'is-invalid' : ''}}" value="{{old('continent')}}">
+                @if($errors->has('continent'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('continent')}}</strong>
+                    </span>
+                @endif
+            </div>
+
+
+
         </div>
 
     @endsection

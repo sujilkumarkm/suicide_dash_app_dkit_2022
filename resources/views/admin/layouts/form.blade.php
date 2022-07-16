@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Details</h3>
+                        <h3 class="card-title">Add info</h3>
                     </div>
                     <!--- Form starts -->
                     <form method="POST" action="@yield('actionUrl')" @yield('encrypt')>
