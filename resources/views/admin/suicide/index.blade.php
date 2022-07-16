@@ -18,6 +18,7 @@
         <th>Year</th>
         <th>Sex</th>
         <th>Suicides</th>
+        <th>Action</th>
     @endsection
     @section('tableBody')
 
@@ -25,9 +26,10 @@
         @foreach($suicides->sortByDesc('id') as $suicide)
             <tr>
                 <td></td>
-                <td>{{$suicide->country_year}}</td>
+                <td>{{$suicide->country}}</td>
                 <td>{{$suicide->year}}</td>
                 <td>{{$suicide->sex}}</td>
+                <td>{{$suicide->suicides}}</td>
                 <td>
                     <form action="{{route('suicide.destroy',$suicide->id)}}" method="POST" id="delete-form-{{$suicide->id}}">
                         {{csrf_field()}}

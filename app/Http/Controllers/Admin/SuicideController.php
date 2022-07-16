@@ -19,7 +19,7 @@ class SuicideController extends Controller
         }
 
         $suicides=Suicide::all();
-        // dd($suicides);
+
         return view('admin.suicide.index',['suicides'=>$suicides]);
     }
 }
