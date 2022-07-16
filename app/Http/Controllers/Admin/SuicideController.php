@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Suicide;
-use App\Models\User;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class SuicideController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function index()
     {
 
@@ -18,7 +19,7 @@ class SuicideController extends Controller
         }
 
         $suicides=Suicide::all();
-
+        // dd($suicides);
         return view('admin.suicide.index',['suicides'=>$suicides]);
     }
 }

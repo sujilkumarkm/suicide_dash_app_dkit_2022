@@ -25,8 +25,9 @@
         @foreach($suicides->sortByDesc('id') as $suicide)
             <tr>
                 <td></td>
-                <td>{{$suicide->name}}</td>
-                <td>{{$suicide->email}}</td>
+                <td>{{$suicide->country_year}}</td>
+                <td>{{$suicide->year}}</td>
+                <td>{{$suicide->sex}}</td>
                 <td>
                     <form action="{{route('suicide.destroy',$suicide->id)}}" method="POST" id="delete-form-{{$suicide->id}}">
                         {{csrf_field()}}
