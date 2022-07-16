@@ -16,7 +16,7 @@ class AdminTableSeeder extends Seeder
         DB::table('admins')->insert([
             'name' => 'Super Admin',
             'email' => 'admin@dkit.ie',
-            'password' => bcrypt('123456'),
+            'password' => bcrypt('111111'),
         ]);
     }
 }

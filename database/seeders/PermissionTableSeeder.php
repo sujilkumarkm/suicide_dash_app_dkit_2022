@@ -56,6 +56,27 @@ class PermissionTableSeeder extends Seeder
             'slug' => 'intern-show',
         ]);
 
+        DB::table('permissions')->insert([
+            'name' => 'suicide Create',
+            'slug' => 'suicide-create',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'suicide Edit',
+            'slug' => 'suicide-edit',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'suicide List',
+            'slug' => 'suicide-list',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'suicide Delete',
+            'slug' => 'suicide-delete',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'suicide Show',
+            'slug' => 'suicide-show',
+        ]);
+
 
         DB::table('permissions')->insert([
             'name' => 'Permission',

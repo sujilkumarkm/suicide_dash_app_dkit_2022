@@ -17,14 +17,14 @@ class RoleTableSeeder extends Seeder
             'name' => 'Super Admin',
             'slug' => 'super-admin',
         ]);
-        
-        for ($i=1; $i < 21 ; $i++) { 
+
+        for ($i=1; $i < 30 ; $i++) {
             DB::table('roles_permissions')->insert([
                 'role_id' => 1,
                 'permission_id' => $i,
             ]);
         }
-        
+
         DB::table('admins_roles')->insert([
             'role_id' => 1,
             'admin_id' => 1,

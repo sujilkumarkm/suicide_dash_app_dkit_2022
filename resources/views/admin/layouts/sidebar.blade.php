@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('intern.index')}}" class="nav-link">
+                    <a href="{{route('suicide.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Suicides Data

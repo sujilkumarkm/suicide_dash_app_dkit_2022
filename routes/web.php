@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\ClientProfileController as AdminClientProfileController;
+use App\Http\Controllers\Admin\SuicideController;
 use Inertia\Inertia;
 use App\Http\Controllers\Front\DashboardController;
 
@@ -58,6 +59,7 @@ Route::prefix('admin')->group(function() {
   Route::get('/bulkDelete/{id}', [EnquiryController::class, 'bulkDelete'])->name('bulkDelete');
 
   Route::resource('/intern', InternController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update']]);
+  Route::resource('/suicide', SuicideController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update']]);
 
 
 });
