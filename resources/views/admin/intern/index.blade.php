@@ -2,8 +2,8 @@
 
 <x-admin-layout>
 <x-datatable-layout>
-@section('title','Matrimony Users')
-@section('tableTitle','Matrimony Users')
+@section('title','Suicides')
+@section('tableTitle','Suicides')
 
 @can('intern-create')
 @section('createRoute')
@@ -14,9 +14,10 @@
 
 @section('tableHead')
     <th>#</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Action</th>
+    <th>Country</th>
+    <th>Year</th>
+    <th>Sex</th>
+    <th>Suicides</th>
 @endsection
 @section('tableBody')
 
