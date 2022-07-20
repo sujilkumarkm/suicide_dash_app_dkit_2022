@@ -86,15 +86,6 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('clients.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-home"></i>
-                        <p>
-                            DKIT Data
-                        </p>
-                    </a>
-                </li>
-
                 @endrole
                 <li class="nav-item">
                     <a href="{{route('enquiry.index')}}" class="nav-link">

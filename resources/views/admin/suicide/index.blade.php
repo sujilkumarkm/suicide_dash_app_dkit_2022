@@ -2,28 +2,21 @@
 
 <x-admin-layout>
     <x-datatable-layout>
-    @section('title','Suicides')
-    @section('tableTitle','Suicides')
-
-    @can('suicide-create')
-    @section('createRoute')
-
-        <a class="btn btn-primary btn-sm mr-2" href=" {{route('suicide.create')}}">Add new</a>
-    @endsection
-    @endcan
-
-    @section('tableHead')
-        <th>#</th>
-        <th>Country</th>
-        <th>Year</th>
-        <th>Sex</th>
-        <th>Suicides</th>
-        <th>Action</th>
-    @endsection
-    @section('tableBody')
-
-    @can('post-list')
-        @foreach($suicides->sortByDesc('id') as $suicide)
+        @section('title','Suicide')
+        @section('tableTitle','Suicide')
+        @section('createRoute')
+            <a class="btn btn-primary btn-sm mr-2" href=" {{route('suicide.create')}}">Add new</a>
+        @endsection
+        @section('tableHead')
+            <th>#</th>
+            <th>Country</th>
+            <th>Year</th>
+            <th>Sex</th>
+            <th>Suicides</th>
+            <th>Action</th>
+        @endsection
+        @section('tableBody')
+            @foreach($suicides->sortByDesc('id') as $suicide)
             <tr>
                 <td></td>
                 <td>{{$suicide->country}}</td>
@@ -39,9 +32,7 @@
                     <a href="{{route('suicide.edit',$suicide->id)}}"><i class="fa fa-edit"></i> </a>
                 </td>
             </tr>
-        @endforeach
-    @endcan
-    @endsection
-
+            @endforeach
+        @endsection
     </x-datatable-layout>
-    </x-admin-layout>
+</x-admin-layout>

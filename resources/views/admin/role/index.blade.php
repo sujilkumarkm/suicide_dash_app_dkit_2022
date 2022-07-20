@@ -1,11 +1,11 @@
 
 
 <x-admin-layout>
-    <x-datatable-layout>  
+    <x-datatable-layout>
     @section('title','Roles')
     @section('tableTitle','Roles')
     @section('createRoute')
-        
+
         <a class="btn btn-primary btn-sm mr-2" href=" {{route('role.create')}}">Add new</a>
     @endsection
     @section('tableHead')
@@ -16,7 +16,7 @@
         <th>Action</th>
     @endsection
     @section('tableBody')
-    
+
         @foreach($roles->sortByDesc('id') as $role)
             <tr>
                 <td></td>
@@ -41,4 +41,4 @@
     @endsection
     </x-datatable-layout>
     </x-admin-layout>
-    
+
