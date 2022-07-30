@@ -32,7 +32,8 @@
                         </tr>
                         </thead>
                         <tbody>
-                            @yield('tableBody')
+                            {{-- @yield('tableBody') --}}
+                            @yield('s_table')
                         </tbody>
                         <tfoot>
                         <tr>

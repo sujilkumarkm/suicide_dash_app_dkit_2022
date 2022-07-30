@@ -16,6 +16,7 @@ class CreateSuicidesTable extends Migration
         Schema::create('suicides', function (Blueprint $table) {
             $table->unsignedBigInteger('id', true)->constrained()->onDelete('cascade');
             $table->string('country')->nullable();
+            $table->string('text')->nullable();
             $table->string('year')->nullable();
             $table->string('sex')->nullable();
             $table->string('age')->nullable();

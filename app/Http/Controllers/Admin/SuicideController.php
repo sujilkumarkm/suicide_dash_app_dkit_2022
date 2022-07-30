@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Suicide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use DataTables;
 
 class SuicideController extends Controller
 {
@@ -12,14 +13,26 @@ class SuicideController extends Controller
     {
         $this->middleware('auth:admin');
     }
-    public function index()
+    public function index(Request $request)
     {
-
         if (! Gate::allows('suicide-list')) {
             return abort(401);
         }
+        $suicides = Suicide::all();
+        // $suicides=Suicide::paginate(10);
+        if ($request->ajax()) {
+            $suicides = Suicide::all();
+            return Datatables::of($suicides)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
 
-        $suicides=Suicide::all();
+                           $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm">View</a>';
+
+                            return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
 
         return view('admin.suicide.index',['suicides'=>$suicides]);
     }
