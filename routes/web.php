@@ -40,7 +40,7 @@ Route::resource('/user', UserController::class);
 Route::resource('/clients', AdminClientProfileController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update','show']]);
 Route::resource('/permission', PermissionController::class);
 
-Route::prefix('adm')->group(function() {
+Route::prefix('admin')->group(function() {
   Route::get('/', [AdminController::class, 'index'])->name('admin.home');
   Route::get('/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
   Route::post('/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
