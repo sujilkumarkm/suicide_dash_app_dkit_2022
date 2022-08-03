@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\AdminRegisterController;
@@ -14,18 +15,25 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\ClientProfileController as AdminClientProfileController;
 use App\Http\Controllers\Admin\SuicideController;
+use Inertia\Inertia;
+use App\Http\Controllers\Front\DashboardController;
 
 
-// Route::middleware(['guest'])->get('/', function () {
+Route::middleware(['guest'])->get('/', function () {
 
-//         return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         // 'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
-Route::get('/', [AdminController::class, 'index'])->name('admin.home');
+        return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        // 'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->prefix('user')->group(function () {
+    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+    Route::get('profile/{user:id}',[ProfileController::class, 'show'])->name('user_profile_show');
+});
+
 
 Route::resource('/role', RoleController::class);
 Route::resource('/user', UserController::class);
