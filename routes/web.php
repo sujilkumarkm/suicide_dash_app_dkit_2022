@@ -19,15 +19,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\Front\DashboardController;
 
 
-Route::middleware(['guest'])->get('/', function () {
-
-        return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        // 'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [AdminController::class, 'index'])->name('admin.home');
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('user')->group(function () {
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
