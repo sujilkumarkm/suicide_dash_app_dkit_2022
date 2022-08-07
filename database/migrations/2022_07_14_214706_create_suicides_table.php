@@ -16,7 +16,6 @@ class CreateSuicidesTable extends Migration
         Schema::create('suicides', function (Blueprint $table) {
             $table->unsignedBigInteger('id', true)->constrained()->onDelete('cascade');
             $table->string('country')->nullable();
-            $table->string('text')->nullable();
             $table->string('year')->nullable();
             $table->string('sex')->nullable();
             $table->string('age')->nullable();
@@ -26,6 +25,8 @@ class CreateSuicidesTable extends Migration
             $table->string('country_year')->nullable();
             $table->bigInteger('yearly_gdp')->nullable();
             $table->bigInteger('gdp_per_capita')->nullable();
+            $table->string('generation')->nullable();
+            $table->bigInteger('suicide_perc')->nullable();
             $table->bigInteger('internetusers')->nullable();
             $table->bigInteger('expenses')->nullable();
             $table->string('employeecompensation')->nullable();
