@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\MetaData;
 
 class HomeController extends Controller
 {
@@ -12,10 +13,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -24,6 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front.home');
+        $metadata=MetaData::where('page_name','Home')->first();
+        return view('front.home',compact('metadata'));
     }
+    public function contact()
+    {
+        $metadata=MetaData::where('page_name','Contact Us')->first();
+        return view('front.contact',['metadata'=>$metadata]);
+    }
+    public function about()
+    {
+        $metadata=MetaData::where('page_name','About Us')->first();
+        return view('front.about',['metadata'=>$metadata]);
+    }
+
 }

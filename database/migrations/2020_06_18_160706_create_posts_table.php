@@ -18,6 +18,11 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->text('cover_photo')->nullable();
+            $table->string('show_in')->nullable();
+            $table->longtext('content')->nullable();
+            $table->string('keywords')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->timestamps();
         });
     }

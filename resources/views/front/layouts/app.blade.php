@@ -14,9 +14,7 @@
         @include('front.layouts.navigation')
 
         <!-- Main content -->
-        <main>
-            {{ $slot }}
-        </main>
+    @yield('content')
 
         @include('front.layouts.footer')
         <!-- Footer content -->

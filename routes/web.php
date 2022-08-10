@@ -14,24 +14,28 @@ use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\ClientProfileController as AdminClientProfileController;
+use App\Http\Controllers\Front\HomeController as FrontHomeController;
 use App\Http\Controllers\Admin\SuicideController;
-use Inertia\Inertia;
+use App\Http\Middleware\ShareVariable;
 use App\Http\Controllers\Front\DashboardController;
 
 
-Route::get('/', [AdminController::class, 'index'])->name('admin.home');
+// Route::get('/', [AdminController::class, 'index'])->name('admin.home');
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('user')->group(function () {
-    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+    // Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
     Route::get('profile/{user:id}',[ProfileController::class, 'show'])->name('user_profile_show');
 });
-
-
-Route::resource('/role', RoleController::class);
-Route::resource('/user', UserController::class);
-Route::resource('/clients', AdminClientProfileController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update','show']]);
-Route::resource('/permission', PermissionController::class);
-
+//view share
+Route::middleware([ShareVariable::class])->group(function () {
+    Route::get('/', [FrontHomeController::class,'index'])->name('home');
+    Route::get('/contact', [FrontHomeController::class,'contact']);
+    Route::get('/about', [FrontHomeController::class,'about']);
+    Route::resource('/role', RoleController::class);
+    Route::resource('/user', UserController::class);
+    Route::resource('/clients', AdminClientProfileController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update','show']]);
+    Route::resource('/permission', PermissionController::class);
+});
 Route::prefix('admin')->group(function() {
   Route::get('/', [AdminController::class, 'index'])->name('admin.home');
   Route::get('/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');

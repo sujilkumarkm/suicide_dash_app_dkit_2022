@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Star extends Migration
+class CreateMetaDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class Star extends Migration
      */
     public function up()
     {
-        Schema::create('stars', function (Blueprint $table) {
+        Schema::create('meta_data', function (Blueprint $table) {
             $table->id();
-            $table->string('star');
+            $table->string('page_name')->nullable();
+            $table->string('url')->nullable();
+            $table->string('title')->nullable();
+            $table->longtext('keyword')->nullable();
+            $table->longtext('description')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class Star extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stars');
+        Schema::dropIfExists('meta_data');
     }
 }

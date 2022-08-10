@@ -10,7 +10,7 @@
             <span class="navbar-toggler-bar burger-lines"></span>
             <span class="navbar-toggler-bar burger-lines"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        {{-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
             <ul class="navbar-nav   d-flex align-items-center">
 
@@ -21,6 +21,6 @@
                     </form>
                 </li>
             </ul>
-        </div>
+        </div> --}}
     </div>
 </nav>
