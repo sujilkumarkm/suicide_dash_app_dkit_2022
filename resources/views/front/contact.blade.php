@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <p>By Submitting This Form, You Are Providing Express Consent To Receive Commercial
-                                Electronic Messages From www.narayam.net You May Unsubscribe At Any Time.</p>
+                                Electronic Messages From www.dkit.ie.narayam.net You May Unsubscribe At Any Time.</p>
                             <input type="submit" value="Submit" class="submit">
                         </form>
                     </div>

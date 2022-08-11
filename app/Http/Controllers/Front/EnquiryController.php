@@ -9,9 +9,8 @@ use Illuminate\Http\Request;
 class EnquiryController extends Controller
 {
     public function store(Request $request){
-        // dd('Hello');
         // if ($request->type) {
-        //     if ($request->message) {
+            //     if ($request->message) {
         //         $msg = 'I am ' . $request->type . ', ' . $request->message;
         //     } else {
         //         $msg = 'I am ' . $request->type;
@@ -26,6 +25,7 @@ class EnquiryController extends Controller
             'phone' => 'required',
             'message' => 'nullable'
         ]);
+        // dd($data);
         if (Enquiry::create($data)) {
             $email=[env('MAIL_TO')];
             Mail::send('front.emails.enquiry-mail', ['enquiry' => $data], function ($message) use ($email, $request) {
@@ -41,5 +41,6 @@ class EnquiryController extends Controller
                     ->subject('Narayam Charitable Trust | Thank you');
             });
         }
+        return response('Your feedback was sent successfully!');
     }
 }
