@@ -1,38 +1,282 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
-    @include('front.layouts.head')
+    <title>@yield('title')</title>
 
-    @yield('styles')
-</head>
-<body class="font-sans antialiased hold-transition sidebar-mini">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- SEO META TAGS -->
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <link rel="canonical" href="{{Request::fullUrl()}}"/>
+    <meta property="og:url" content="{{Request::fullUrl()}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="@yield('title')"/>
+    <meta property="og:description" content="@yield('description')"/>
+    <meta property="og:image" content="@yield('og_image','/assets/img/mat_logo.png')"/>
+    <meta name="csrf-token" content="<?= csrf_token() ?>">
+    <!-- SEO META TAGS -->
 
-    <div class="min-h-screen bg-gray-100">
+    <!-- ICONS -->
+    <link rel="icon" href="{{asset('assets/img/fav.png')}}" type="image/png">
+    <!-- ICONS -->
 
-        <!-- Navigation Bar -->
-        @include('front.layouts.navigation')
+    <!--STYLESHEETS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+          <link rel="stylesheet" href="{{asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
 
-        <!-- Main content -->
-    @yield('content')
+    <!-- STYLESHEET CDN -->
 
-        @include('front.layouts.footer')
-        <!-- Footer content -->
+    <!-- STYLESHEET INTERNAL -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}?v0.2">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.theme.default.min.css')}}">
+    <!-- STYLESHEET INTERNAL -->
 
-    </div>
-</body>
-<script>
-    function confirmation(i){
-        if(confirm('are you sure?')){
-            let form_name='delete-form-'+i;
-            document.getElementById(form_name).submit();
-        }else{
-            return false;
+    <!--SCRIPTS CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--    slider-price-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <!--SCRIPTS CDN -->
+
+    <!--SCRIPTS INTERNAL -->
+    <script src="{{asset('assets/js/owl.carousel.js')}}"></script>
+    <script src="{{asset('assets/js/script.js')}}"></script>
+    <script defer src="{{ asset('js/app.js') }}?v0.1" type="text/javascript"></script>
+    <!--SCRIPTS INTERNAL -->
+
+    <!-- RECAPTCHA -->
+    {{-- <script src="https://www.google.com/recaptcha/api.js?render={{env('GOOGLE_RECAPTCHA_KEY')}}"></script> --}}
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
         }
-    }
-</script>
-@include('front.layouts.scripts')
+    </style>
+    <!-- RECAPTCHA -->
+    @stack('styles')
+</head>
+<body>
 
+<nav class="navbar navbar-expand-xl smart-scroll navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="{{asset('assets/img/mat_logo.png')}}" class="img-fluid" style="max-height:80px !important;" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                    <a class="nav-link toggle-menu" href="/">Home</a>
+                </li>
+            <li class="nav-item dropdown ddown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Listings</a>
+                    <ul class="dropdown-menu">
+                           <li class="ddown">
+                                <a class="dropdown-item" href="#">Find My Match</a>
+                            </li>
+                            <li class="ddown">
+                                <a class="dropdown-item" href="#">Featured Profiles</a>
+                            </li>
+                        </ul>
+                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link toggle-menu" href="/sold-search?property_type_1=1">WEDDING GALLERY</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link toggle-menu" href="/about">about us</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link toggle-menu" href="/contact">contact us</a>
+                </li>
+                <li class="nav-item dropdown ddown">
+                    <a class="nav-link dropdown-toggle drp" href="#" data-toggle="dropdown" aria-expanded="false">Login/Register</a>
+                    <ul class="dropdown-menu">
+                    <li class="ddown"><a class="dropdown-item" href="/new-listing-alert">Login</a></li>
+                    <li class="ddown"><a class="dropdown-item" href="/neighbourhood-alert">Register</a></li>
+
+                        @if($data['sellers'])
+                        <li class="ddown"><a class="dropdown-item dropdown-toggle" href="#">Seller's Guide</a>
+                            <ul class="submenu dropdown-menu">
+                            @foreach($data['blog_data'] as $blog)
+                            @if($blog->show_in =="Seller's Guide")
+                            <li class="ddown"><a class="dropdown-item" href="{{route('blog.show',$blog->slug)}}"
+                                       >{{$blog->title}}</a></li>
+
+                            @endif
+                            @endforeach
+                            </ul>
+                        </li>
+                        @endif
+                        @if($data['buyers'])
+                        <li class="ddown"><a class="dropdown-item dropdown-toggle" href="#">Buyer's Guide</a>
+                            <ul class="submenu dropdown-menu">
+                            @foreach($data['blog_data'] as $blog)
+                            @if($blog->show_in =="Buyer's Guide")
+                            <li class="ddown"><a class="dropdown-item" href="{{route('blog.show',$blog->slug)}}"
+                                       >{{$blog->title}}</a></li>
+
+                             @endif
+                            @endforeach
+                            </ul>
+                        </li>
+                        @endif
+                        @if($data['blogs'])
+                        <li class="ddown"><a class="dropdown-item dropdown-toggle" href="#">Blogs</a>
+                            <ul class="submenu dropdown-menu">
+                            @foreach($data['blog_data'] as $blog)
+                            @if($blog->show_in =="Blogs")
+                            <li class="ddown"><a class="dropdown-item" href="{{route('blog.show',$blog->slug)}}"
+                                       >{{$blog->title}}</a></li>
+
+                             @endif
+                            @endforeach
+                            </ul>
+                        </li>
+                        @endif
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="modal fade" id="consultation-modal" tabindex="-1" role="dialog" aria-labelledby="consultation-modal"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="{{asset('assets/img/close.png')}}" alt=""></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="consultation-modal"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="{{asset('assets/img/close.png')}}" alt=""></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="body-inner">
+                    <div class="inner-left">
+                        <!-- <h3 style="text-align:center;">Narayam Charitable Trust</h3> -->
+                        <img src="{{asset('assets/img/hardeep.png')}}?v0.1" alt="" class="img-fluid">
+                    </div>
+                    <div class="inner-right">
+                    <h3 style="color:#FFFFFF;">THANKS FOR SHARING DETAILS.</h3>
+                        <h4 style="color:#FFFFFF;">One of our real estate expert will reach out to you.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="mailto:{{$data['site_details']->email_1}}" class="chat-icon" ><img src="{{asset('assets/img/wp-icon.png')}}?v0.1" alt="" class="img-fluid"></a>
+
+@yield('content')
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="quick-links">
+                           <li><a href="/">Home</a></li>
+                            <li><a href="/residential-properties?property_type_1=1">Residential</a></li>
+                            <li><a href="/residential-properties?property_type_1=2">Condo</a></li>
+                            <li><a href="/residential-properties?property_type_1=3">Commercial</a></li>
+                            <li><a href="/about">About </a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="https://trreb.ca/index.php/market-news/market-watch" target="_blank">Market Watch Report
+                            </a></li>
+                            <!-- <li><a href="">Communities</a></li>
+                            <li><a href="">Investments</a></li>
+
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">News</a></li>
+                             -->
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul class="footer-contact">
+                            <li>
+                                <h6>CALL</h6>
+                                <a href="tel:+1{{$data['site_details']->phone_1}}">+1 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <h6>EMAIL</h6>
+                                <a href="mailto:{{$data['site_details']->email_1}}">{{$data['site_details']->email_1}}</a>
+                            </li>
+                            <li>
+                                <h6>ADDRESS</h6>
+                                <span style="color:white !important;">{{$data['site_details']->address}}</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="designed">
+                            <div class="logo">
+                            <a  href="https://narayam.net" target="_blank">
+                                <img src="{{asset('assets/img/footer-mat_logo.png')}}" alt="" style="max-width:150px;" class="img-fluid"></a>
+                            </div>
+                            <!-- <p class="text-center">Designed by Narayam</p> -->
+                            <p class="text-center">Trusted listing from narayam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <ul class="list-inline more-links">
+                            <li class="list-inline-item">© Copyright 2021 www.narayam.net</li>
+                            <!-- <li class="list-inline-item"><a href="">Sitemap</a></li> -->
+                            <li class="list-inline-item"><a href="{{route('login')}}" target="_blank"> Admin Login</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="{{$data['site_details']->facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$data['site_details']->twitter}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$data['site_details']->linkedin}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$data['site_details']->instagram}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                    </div>
+                     <div class="col-sm-2">
+                     <a  href="https://narayam.net" style="color:white;" target="_blank"> <p class="text-center">Designed by Narayam</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="{{asset('/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <!-- form submission -->
 <script src="{{asset('/plugins/inputmask/min/jquery.inputmask.bundle.min.js')}}"></script>
@@ -651,52 +895,8 @@
     });
 });
 </script>
-<script>
-    $(document).on('submit', '.contact-form', function (event) {
-        var type = $(this).attr('data-type');
-        var text = $(".submit").val();
-        var datas = $(this).serialize();
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
 
-        $(".submit").val('Please wait ..');
-        $(".submit").html('Please wait ..');
-        $("#submit").html('Wait..');
-        event.preventDefault();
-        grecaptcha.ready(function () {
-            grecaptcha.execute("{{env('GOOGLE_RECAPTCHA_KEY')}}", {action: "contact"}).then(function (token) {
-                $.ajax({
-                    type: 'post',
-                    url: '/enquiry',
-                    data: datas + "&recaptcha-response=" + token,
-                    success: function (response) {
-
-                        if (response == 'OK') {
-                            $("#consultation-modal").modal('hide')
-                            if (type == 'signup') {
-                                location.reload();
-                            } else {
-                                $("#thanks-modal").modal('show')
-                            }
-
-                        }
-
-                        $(".submit").val(text);
-                        $(".submit").html('SUBMIT');
-                        $("#submit").html('<i class="fa fa-arrow-right"></i>');
-                        $(".contact-form").trigger("reset");
-                    },
-                    error: function () {
-                        alert('Some error occurred');
-                    }
-                });
-            })
-        })
-    });
-</script>
 @stack('scripts')
-
+</body>
 </html>
+

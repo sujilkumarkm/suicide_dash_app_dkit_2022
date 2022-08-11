@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
 <title>{{ config('app.name', 'DKIT Suicide Analysis App') }}</title>
 
 <!-- Fonts -->
@@ -33,6 +34,15 @@
 
 <!-- SweetAlert2 -->
 <link rel="stylesheet" href="{{asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
+
+
+<!--SCRIPTS INTERNAL -->
+<script src="{{asset('assets/js/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/script.js')}}"></script>
+<script defer src="{{ asset('js/app.js') }}?v0.1" type="text/javascript"></script>
+<!--SCRIPTS INTERNAL -->
+
+
 
 @livewireStyles
 

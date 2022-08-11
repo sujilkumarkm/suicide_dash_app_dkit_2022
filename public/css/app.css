@@ -1034,6 +1034,10 @@ select {
   margin-left: 1.75rem;
   margin-right: 1.75rem;
 }
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1138,6 +1142,9 @@ select {
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mt-40 {
+  margin-top: 10rem;
 }
 .block {
   display: block;

@@ -35,8 +35,8 @@
                 <li class="nav-item dropdown ddown">
                     <a class="nav-link dropdown-toggle drp" href="#" data-toggle="dropdown" aria-expanded="false">Login/Register</a>
                     <ul class="dropdown-menu">
-                    <li class="ddown"><a class="dropdown-item" href="/new-listing-alert">Login</a></li>
-                    <li class="ddown"><a class="dropdown-item" href="/neighbourhood-alert">Register</a></li>
+                    {{-- <li class="ddown"><a class="dropdown-item" href="/new-listing-alert">Login</a></li>
+                    <li class="ddown"><a class="dropdown-item" href="/neighbourhood-alert">Register</a></li> --}}
 
                         @if($data['sellers'])
                         <li class="ddown"><a class="dropdown-item dropdown-toggle" href="#">Seller's Guide</a>

@@ -19,7 +19,7 @@
             <h3 class="common-head">FEATURED <span style="color:red;">PROFILES</span></h3>
             <div class="row mt-40">
                 <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team3.jpg" alt="">
+                    <div class="box1"> <img src="/assets/img/our-team1.jpg" alt="">
                         <h3 class="title">Arjun Saji</h3>
                         <ul class="icon">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team1.jpg" alt="" class="img-thumbn">
+                    <div class="box1"> <img src="/assets/img/our-team2.jpg" alt="" class="img-thumbn">
                         <h3 class="title">Sujil Kumar K.M</h3>
                         <ul class="icon">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team2.jpg" alt="">
+                    <div class="box1"> <img src="/assets/img/our-team3.jpg" alt="">
                         <h3 class="title">Shruthi S</h3>
                         <ul class="icon">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -54,7 +54,7 @@
             </div>
              <div class="row mt-40">k
                 <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team3.jpg" alt="">
+                    <div class="box1"> <img src="/assets/img/our-team4.jpg" alt="">
                         <h3 class="title">Arjun Saji</h3>
                         <ul class="icon">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -65,19 +65,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team1.jpg" alt="" class="img-thumbn">
+                    <div class="box1"> <img src="/assets/img/our-team5.jpg" alt="" class="img-thumbn">
                         <h3 class="title">Sujil Kumar K.M</h3>
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team2.jpg" alt="">
-                        <h3 class="title">Shruthi S</h3>
                         <ul class="icon">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
