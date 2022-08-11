@@ -21,7 +21,12 @@
 <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
 
 <!-- Theme style -->
-<link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+{{-- <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}"> --}}
+
+<!-- STYLESHEET INTERNAL -->
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}?v0.2">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.theme.default.min.css')}}">
 
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">

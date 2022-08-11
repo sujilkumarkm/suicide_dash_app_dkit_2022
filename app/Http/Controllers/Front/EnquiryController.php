@@ -38,7 +38,7 @@ class EnquiryController extends Controller
             Mail::send('front.emails.thankyou-layout', ['enquiry' => $data], function ($message) use ($email, $request) {
                 $message->to($email)
                     ->replyTo(env('MAIL_TO'))
-                    ->subject('Narayam Charitable Trust | Thank you');
+                    ->subject('Suicide Dash App Feedback | Thank you');
             });
         }
         return response('Your feedback was sent successfully!');

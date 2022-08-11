@@ -3,7 +3,7 @@
 @section('description',$metadata->description)
 @section('keywords',$metadata->keyword)
 @section('nav-class','inner')
-@section('logo'){{asset('assets/img/inner-mat_logo.png')}}@endsection
+@section('logo'){{asset('assets/img/inner-Dkit_logo_small.jpg')}}@endsection
 @section('content')
     <div class="about-us page">
         <div class="page-header">
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-5 col-md-5 col-sm-5">
                         <div class="left-block">
-                            <img src="{{asset('assets/img/hardeep.png')}}?v0.1" alt="Sell House Niagara" class="img-fluid">
+                            <img src="{{asset('assets/img/Dkit_logo_small.jpg')}}?v0.1" alt="Sell House Niagara" class="img-fluid">
                             <div class="bg-block">
                                 <h3>DKIT Suicide Dash App</h3>
                                 <h4>Kottayam</h4>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-7 mt-3">
                         {!!$data['site_details']->about_us!!}
-                        <img src="{{asset('assets/img/about-vow.png')}}" alt="About Realtor" style="height:400px;" class="img-fluid">
+                        <img src="{{asset('assets/img/about-vow.png')}}" alt="About Dash App" style="height:400px;" class="img-fluid">
                     </div>
 
                 </div>
