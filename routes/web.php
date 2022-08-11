@@ -17,13 +17,9 @@ use App\Http\Controllers\Admin\ClientProfileController as AdminClientProfileCont
 use App\Http\Controllers\Front\HomeController as FrontHomeController;
 use App\Http\Controllers\Admin\SuicideController;
 use App\Http\Middleware\ShareVariable;
-use App\Http\Controllers\Front\DashboardController;
-
-
-// Route::get('/', [AdminController::class, 'index'])->name('admin.home');
+use App\Http\Controllers\Front\EnquiryController as ControllersFrontEnquiryController;
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('user')->group(function () {
-    // Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
     Route::get('profile/{user:id}',[ProfileController::class, 'show'])->name('user_profile_show');
 });
 //view share
@@ -35,6 +31,10 @@ Route::middleware([ShareVariable::class])->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/clients', AdminClientProfileController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update','show']]);
     Route::resource('/permission', PermissionController::class);
+    Route::post('/mail-enquiry', [ControllersFrontEnquiryController::class,'store'])->name('enquiry.form');
+    // Route::post('/mail-enquiry', function () { // 500 internal error
+    //     dd('Hello world');
+    // })->name('enquiry.form');
 });
 Route::prefix('admin')->group(function() {
   Route::get('/', [AdminController::class, 'index'])->name('admin.home');

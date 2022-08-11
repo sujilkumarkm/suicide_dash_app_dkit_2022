@@ -28,7 +28,8 @@
                 <div class="col-sm-8">
                     <div class="contact-block">
                         <!-- <h3>Contact me by</h3> -->
-                        <form action="{{route('enquiry')}}" method="post" class="contact-form">
+                        <form action="{{route('enquiry.form')}}" method="post" class="contact-form">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-4">
                                     <input type="text" placeholder="Name" name="name" class="form-control" required>
