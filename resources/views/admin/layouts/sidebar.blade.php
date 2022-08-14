@@ -22,6 +22,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('settings',1)}}" class="nav-link">
+                    <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            Settings
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-home"></i>

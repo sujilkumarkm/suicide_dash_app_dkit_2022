@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Enquiry;
 
 class AdminController extends Controller
 {
@@ -24,6 +25,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $enquiry=Enquiry::count();
+        return view('admin.home',['enquiry'=>$enquiry]);
     }
 }

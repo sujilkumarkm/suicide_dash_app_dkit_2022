@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\ClientProfileController as AdminClientProfileController;
 use App\Http\Controllers\Front\HomeController as FrontHomeController;
+use App\Http\Controllers\Admin\HomeController as AdminHomeController;;
 use App\Http\Controllers\Admin\SuicideController;
 use App\Http\Middleware\ShareVariable;
 use App\Http\Controllers\Front\EnquiryController as ControllersFrontEnquiryController;
@@ -47,6 +48,9 @@ Route::prefix('admin')->group(function() {
   Route::post('/password/reset', [AdminResetPasswordController::class, 'reset'])->name('admin.password.update');
   Route::get('/password/reset/{token}', [AdminResetPasswordController::class, 'showResetForm'])->name('admin.password.reset');
 
+  //   settings
+  Route::get('/settings/{id}', [AdminHomeController::class,'settings'])->name('settings');
+  Route::post('/admin/site-details', [AdminHomeController::class,'sitedetails'])->name('site-details');
   Route::get('/register', [AdminRegisterController::class, 'showRegistrationForm'])->name('admin.register');
   Route::post('/register', [AdminRegisterController::class, 'register'])->name('admin.register.submit');
 
