@@ -18,7 +18,7 @@
                 <div class="col-sm-4">
                     <div class="block-left" >
                         <!--                            <img src="assets/img/contact.png" alt="Commercial Property  Caledon" class="img-fluid">-->
-                        <img src="{{asset('assets/img/Dkit_logo_small.jpg')}}?v0.1" alt="dkit suide dash application" class="img-fluid">
+                        <img src="{{asset('assets/img/logo.png')}}?v0.1" alt="dkit suide dash application" class="img-fluid">
                         <h4>Suicide Dash App Feedback</h4>
                         <h5>Kottayam</h5>
                         <a href="tel:+1{{$data['site_details']->phone_2}}" style="font-size:15px;"><img src="{{asset('assets/img/call-blue.png')}}" alt="Call Icon" >+1 ({{substr($data['site_details']->phone_2 ,0,3)}}) {{substr($data['site_details']->phone_2,3,3)}}-{{substr($data['site_details']->phone_2,6,9)}}</a>

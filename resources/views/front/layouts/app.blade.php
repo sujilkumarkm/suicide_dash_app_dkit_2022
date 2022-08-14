@@ -37,7 +37,6 @@
     <!-- STYLESHEET CDN -->
 
     <!-- STYLESHEET INTERNAL -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/narayam.css')}}?v0.2">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.theme.default.min.css')}}">
@@ -57,7 +56,7 @@
     <!--SCRIPTS INTERNAL -->
     <script src="{{asset('assets/js/owl.carousel.js')}}"></script>
     <script src="{{asset('assets/js/script.js')}}"></script>
-    <script defer src="{{ mix('js/app.js') }}"></script>
+        <script defer src="{{ asset('js/app.js') }}?v0.2" type="text/javascript"></script>
     <!--SCRIPTS INTERNAL -->
 
     <!-- RECAPTCHA -->
@@ -120,31 +119,6 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="consultation-modal"
-     style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="{{asset('assets/img/close.png')}}" alt=""></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="body-inner">
-                    <div class="inner-left">
-                        <!-- <h3 style="text-align:center;">Narayam Charitable Trust</h3> -->
-                        <img src="{{asset('assets/img/hardeep.png')}}?v0.1" alt="" class="img-fluid">
-                    </div>
-                    <div class="inner-right">
-                    <h3 style="color:#FFFFFF;">THANKS FOR SHARING DETAILS.</h3>
-                        <h4 style="color:#FFFFFF;">One of our real estate expert will reach out to you.</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <a href="mailto:{{$data['site_details']->email_1}}" class="chat-icon" ><img src="{{asset('assets/img/wp-icon.png')}}?v0.1" alt="" class="img-fluid"></a>
 
 @yield('content')
@@ -158,8 +132,9 @@
                            <li><a href="/">Home</a></li>
                             <li><a href="/about">About </a></li>
                             <li><a href="/contact">Contact Us</a></li>
-                            <li><a href="https://trreb.ca/index.php/market-news/market-watch" target="_blank">Market Watch Report
-                            </a></li>
+                            <li><a href="" target="_blank">Dashboard</a></li>
+                            <li><a href="" target="_blank">Prediction</a></li>
+                            <li><a href="" target="_blank">Analysis</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
