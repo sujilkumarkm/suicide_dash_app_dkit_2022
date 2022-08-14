@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 use App\Models\Enquiry;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class EnquiryController extends Controller
 {
@@ -40,7 +41,8 @@ class EnquiryController extends Controller
                     ->replyTo(env('MAIL_TO'))
                     ->subject('Suicide Dash App Feedback | Thank you');
             });
+            Alert::success('Thanks', 'Your feedback has been successfully sent!');
+            return back();
         }
-        return response('Your feedback was sent successfully!');
     }
 }

@@ -65,7 +65,7 @@
     @stack('styles')
 </head>
 <body>
-
+@include('sweetalert::alert')
 <nav class="navbar navbar-expand-xl smart-scroll navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
