@@ -19,7 +19,7 @@
     <!-- SEO META TAGS -->
 
     <!-- ICONS -->
-    <link rel="icon" href="{{asset('assets/img/fav.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('assets/img/fav.png')}}?v0.1" type="image/png">
     <!-- ICONS -->
 
     <!--STYLESHEETS CDN -->
@@ -166,7 +166,7 @@
                         <ul class="footer-contact">
                             <li>
                                 <h6>CALL</h6>
-                                <a href="tel:+1{{$data['site_details']->phone_1}}">+1 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
+                                <a href="tel:+353 wire:{{$data['site_details']->phone_1}}">+353 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
                             </li>
                             <li></li>
                             <li>
@@ -212,7 +212,7 @@
                     </ul>
                     </div>
                      <div class="col-sm-2">
-                     <a  href="https://narayam.net" style="color:white;" target="_blank"> <p class="text-center">Designed by Narayam</p></a>
+                     <a  href="https://narayam.net" style="color:white;" target="_blank"> <p class="text-center">Designed by Sujil</p></a>
                     </div>
                 </div>
             </div>
