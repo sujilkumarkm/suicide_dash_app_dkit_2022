@@ -22,7 +22,7 @@
                         <h4>Suicide Dash App Feedback</h4>
                         <h5>MSc, Data Analytics</h5>
                         <a href="tel:+353{{$data['site_details']->phone_1}}" style="font-size:15px;"><img src="{{asset('assets/img/call-blue.png')}}" alt="Call Icon" >+353 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
-                        <a target="_blank" href="mailto:{{$data['site_details']->email_2}}" style="font-size:15px;"><img src="{{asset('assets/img/mail-blue.png')}}" alt="Email Icon">{{$data['site_details']->email_2}}</a>
+                        <a target="_blank" href="mailto:{{$data['site_details']->email_1}}" style="font-size:15px;"><img src="{{asset('assets/img/mail-blue.png')}}" alt="Email Icon">{{$data['site_details']->email_1}}</a>
                     </div>
                 </div>
                 <div class="col-sm-8">
