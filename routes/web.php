@@ -56,6 +56,11 @@ Route::prefix('admin')->group(function() {
   Route::get('/register', [AdminRegisterController::class, 'showRegistrationForm'])->name('admin.register');
   Route::post('/register', [AdminRegisterController::class, 'register'])->name('admin.register.submit');
 
+  //metadata
+  Route::get('/meta-data',[AdminHomeController::class,'metadata'])->name('metadata');
+  Route::post('/meta-data/page',[AdminHomeController::class,'pages'])->name('metadata.page');
+  Route::post('/meta-data/update',[AdminHomeController::class,'metaUpdate'])->name('metadata.update');
+
   Route::resource('/post', PostController::class,['only' => ['index', 'create', 'store', 'destroy', 'edit', 'update']]);
   Route::resource('/enquiry', EnquiryController::class,['only' => ['index', 'destroy']]);
   Route::get('/bulkDelete/{id}', [EnquiryController::class, 'bulkDelete'])->name('bulkDelete');

@@ -31,6 +31,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('metadata')}}" class="nav-link">
+                    <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            Meta Data
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('about-page',1)}}" class="nav-link">
                     <i class="nav-icon fa fa-file"></i>
                         <p>

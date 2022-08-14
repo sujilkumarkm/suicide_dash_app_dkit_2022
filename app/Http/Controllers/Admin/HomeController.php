@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\SiteDetails;
 use App\Http\Controllers\Controller;
+use App\Models\MetaData;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -80,5 +81,30 @@ class HomeController extends Controller
         $data['about_us']=$request->about_us;
         $site_details->update($data);
         return back()->with('success','Abouted aded Successfully');
+    }
+
+    public function metadata()
+    {
+        $metadatas=MetaData::all();
+        // dd($metadatas);
+        return view('admin.meta_data',['metadatas'=>$metadatas]);
+
+    }
+    public function  pages(Request $request)
+    {
+        $page=MetaData::where('page_name',$request->page)->first();
+        return response($page);
+    }
+    public function metaUpdate(Request $request)
+    {
+
+        $metadata=MetaData::findOrFail($request->id);
+        $data=[
+            'title'=>$request->title,
+            'keyword'=>$request->keyword,
+            'description'=>$request->description,
+        ];
+        $metadata->update($data);
+        return response('success');
     }
 }

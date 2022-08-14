@@ -1,34 +1,28 @@
 $(document).ready(function () {
-    $("#map-toggle").click(function () {
-        $(".props-lists").css({"display": "none"});
-        $(".props-grid").css({"display": "none"});
-        $(".map-view").css({"display": "block"});
-    });
-    $("#list-toggle").click(function () {
-        $(".props-lists").css({"display": "block"});
-        $(".props-grid").css({"display": "none"});
-        $(".map-view").css({"display": "none"});
+    // $("#list-toggle").click(function () {
+    //     $(".props-lists").css({"display": "block"});
+    //     $(".props-grid").css({"display": "none"});
 
-    });
-    $("#grid-toggle").click(function () {
-        $(".props-lists").css({"display": "none"});
-        $(".props-grid").css({"display": "block"});
-        $(".map-view").css({"display": "none"});
-    });
+    // });
+    // $("#grid-toggle").click(function () {
+    //     $(".props-lists").css({"display": "none"});
+    //     $(".props-grid").css({"display": "block"});
+    // });
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         var widthh = $(window).width();
+        var colorr = $(".index .banner-contact .send-button button").css("background");
         if (scroll >= 100 && widthh >= 767) {
             $(".navbar.index").css({
-                "height": "auto",
+                // "height": "91px",
                 "transition": "all .3s",
-                "background": "#011621"
+                "background": colorr
             });
-            // $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo2.svg");
-            $(".navbar.index .navbar-brand img").css({
-                "height": "65px",
-                "transition": "all .2s"
-            });
+            $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo-white.png");
+            // $(".navbar.index .navbar-brand img").css({
+            //     "height": "65px",
+            //     "transition": "all .2s"
+            // });
         }
         if (scroll <= 100 && widthh >= 767) {
 
@@ -38,11 +32,11 @@ $(document).ready(function () {
                 "transition": "all .4s",
                 "background": "transparent"
             });
-            // $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo.svg");
-            $(".navbar.index .navbar-brand img").css({
-                "height": "160px",
-                "transition": "all .2s"
-            });
+            $(".navbar.index .navbar-brand img").attr("src", "assets/img/brokerage-logo-white.png");
+            // $(".navbar.index .navbar-brand img").css({
+            //     "height": "182px",
+            //     "transition": "all .2s"
+            // });
         }
     });
     $(window).scroll(function () {
@@ -53,13 +47,13 @@ $(document).ready(function () {
             $(".navbar.index").css({
                 "height": "auto",
                 "transition": "all .3s",
-                "background": "#011621"
+                "background": colorr
             });
-            // $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo2.svg");
-            $(".navbar.index .navbar-brand img").css({
-                "height": "65px",
-                "transition": "all .2s"
-            });
+            $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo-white.png");
+            // $(".navbar.index .navbar-brand img").css({
+            //     "height": "65px",
+            //     "transition": "all .2s"
+            // });
             $(".navbar.index .navbar-toggler").css({
                 "background": colorr,
                 "padding": "10px",
@@ -73,11 +67,11 @@ $(document).ready(function () {
                 "transition": "all .4s",
                 "background": "transparent"
             });
-            // $(".navbar.index .navbar-brand img").attr("src", "assets/img/logo.svg");
-            $(".navbar.index .navbar-brand img").css({
-                "height": "90px",
-                "transition": "all .2s"
-            });
+            $(".navbar.index .navbar-brand img").attr("src", "assets/img/brokerage-logo-white.png");
+            // $(".navbar.index .navbar-brand img").css({
+            //     "height": "90px",
+            //     "transition": "all .2s"
+            // });
 
             $(".navbar.index .navbar-toggler").css({
                 "background": "transparent",

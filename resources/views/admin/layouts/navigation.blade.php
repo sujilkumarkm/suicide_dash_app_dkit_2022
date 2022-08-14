@@ -10,7 +10,7 @@
             <a href="{{env('MAIN_WEBSITE')}}" class="nav-link" target="_blank"><i class="fa fa-home"></i> Main Webisite</a>
         </li>
     </ul>
-    
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Right Side Of Navbar -->

@@ -92,10 +92,10 @@
                         </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link toggle-menu" href="/about">about us</a>
+                    <a class="nav-link toggle-menu" href="/about-us">about us</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link toggle-menu" href="/contact">contact us</a>
+                    <a class="nav-link toggle-menu" href="/contact-us">contact us</a>
                 </li>
             </ul>
 
