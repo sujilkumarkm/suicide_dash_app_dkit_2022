@@ -172,7 +172,7 @@
                 <div class="row">
                     <div class="col-sm-7">
                         <ul class="list-inline more-links">
-                            <li class="list-inline-item">© Copyright 2021 www.dkit.ie.narayam.net</li>
+                            <li class="list-inline-item">© Copyright 2022 www.dkit.ie.narayam.net</li>
                             <!-- <li class="list-inline-item"><a href="">Sitemap</a></li> -->
                             <li class="list-inline-item"><a href="{{route('admin.login')}}" target="_blank"> Admin Login</a></li>
 
