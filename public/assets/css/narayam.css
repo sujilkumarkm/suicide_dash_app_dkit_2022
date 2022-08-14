@@ -7044,4 +7044,8 @@ body {
     }
 }
 
+.fa-instagram:before, .fa-facebook, .fa-twitter, .fa-linkedin
+{
+    color:white;
+}
 /*# sourceMappingURL=style-realty.css.map */

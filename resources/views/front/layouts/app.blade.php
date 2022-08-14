@@ -59,12 +59,7 @@
     <script defer src="{{ asset('js/app.js') }}?v6.1" type="text/javascript"></script>
     <!--SCRIPTS INTERNAL -->
 
-    <!-- RECAPTCHA -->
-    {{-- <script src="https://www.google.com/recaptcha/api.js?render={{env('GOOGLE_RECAPTCHA_KEY')}}"></script> --}}
     <style>
-        .grecaptcha-badge {
-            visibility: hidden;
-        }
     </style>
     <!-- RECAPTCHA -->
     @stack('styles')
