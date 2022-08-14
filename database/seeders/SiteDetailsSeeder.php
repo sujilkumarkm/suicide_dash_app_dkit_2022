@@ -22,10 +22,10 @@ class SiteDetailsSeeder extends Seeder
             'address'=>'Dundalk Institute of Technology',
             'whatsapp'=>'0892738178',
             'facebook'=>'https://www.facebook.com/kmsujil',
-            'twitter'=>'',
+            'twitter'=>'https://www.twitter.com/sujilkumarkm',
             'linkedin'=>'https://www.linkedin.com/in/sujil/',
             'instagram'=>'https://www.instagram.com/sujilkumarkm/',
-            'youtube'=>'',
+            'youtube'=>'https://www.youtube.com/channel/UCK5dVklCR4cddZl8Jn77IyA',
         ]);
     }
 }
