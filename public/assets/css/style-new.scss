@@ -1262,11 +1262,11 @@ h3.common-head {
 
     .banner-caption {
       position: absolute;
-      bottom: 50px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       width: 100%;
-      text-align: center;
+      text-align: left;
       padding: 0 15px;
 
       h1 {
@@ -1288,7 +1288,7 @@ h3.common-head {
     background-color: #003D75;
     overflow: visible;
     min-height: 121px;
-    margin-top: -8px;
+    //margin-top: -8px;
 
     .find-property {
       background-image: none !important;
@@ -2028,11 +2028,8 @@ h3.common-head {
   }
 
   .join-us {
-    background-color: #cbe0e7;
+    background-color: #f2f7fb;
     padding: 75px 0;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
 
     ul.points {
       list-style: none;
@@ -3359,6 +3356,7 @@ h3.common-head {
 
 }
 
+
 .property-detail {
   .image-slider {
     margin-bottom: 50px;
@@ -3415,49 +3413,6 @@ h3.common-head {
           }
         }
       }
-
-      ul.social {
-        margin: 15px 0;
-
-        li {
-          &:not(:last-child) {
-            margin-right: 10px !important;
-            padding-right: 0;
-
-            &:after {
-              display: none;
-            }
-          }
-
-          a {
-            border: 1px solid #444444;
-            display: block;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            transition: all 0.25s;
-
-            &:hover {
-              background-color: $base-color-two;
-
-              .fa {
-                color: #FFFFFF;
-              }
-            }
-
-            .fa {
-              color: #444444;
-              font-size: 16px;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              transition: all 0.25s;
-            }
-          }
-        }
-      }
-
 
       p {
         margin-bottom: 10px;
@@ -6690,6 +6645,7 @@ h3.common-head {
   }
 }
 
+
 @media (min-width: 992px) {
   .navbar-expand-xl .navbar-nav .dropdown-menu {
     position: absolute;
@@ -6706,6 +6662,7 @@ h3.common-head {
       }
     }
   }
+
   .search-result {
     width: 100% !important;
     max-width: 100% !important;
@@ -7669,6 +7626,11 @@ h3.common-head {
   }
   .index {
     .banner {
+      img {
+        object-fit: cover;
+        height: 250px;
+      }
+
       &:before {
         display: none !important;
       }
@@ -7679,6 +7641,7 @@ h3.common-head {
         transform: none;
         padding: 20px 15px;
         background-color: $base-color-two;
+        text-align: center;
 
         h1 {
           font-size: 20px !important;
@@ -7829,7 +7792,7 @@ h3.common-head {
 
     .join-us {
       margin: 30px 0 0 0;
-      padding: 0 0 30px 0;
+      padding: 30px 0;
       background-image: none !important;
 
       img {
@@ -8208,7 +8171,7 @@ h3.common-head {
   .index {
     .banner {
       .banner-caption {
-        bottom: 20px;
+        //bottom: 20px;
 
         h1 {
           font-size: 22px;
@@ -8674,7 +8637,7 @@ h3.common-head {
   .index {
     .banner {
       .banner-caption {
-        bottom: 25px;
+        //bottom: 25px;
 
         h1 {
           font-size: 30px;
@@ -8878,7 +8841,7 @@ h3.common-head {
   .index {
     .banner {
       .banner-caption {
-        bottom: 40px;
+        //bottom: 40px;
       }
     }
   }

@@ -19055,6 +19055,410 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=script&lang=js":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=script&lang=js ***!
+  \****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'owl.carousel/dist/assets/owl.carousel.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'owl.carousel'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['enq_route', 'freeholds', 'site_details', 'soldlistings', 'csrf', 'pred_route', 'dream_route', 'profiles', 'awards', 'precondo'],
+  created: function created() {
+    this.get_listings();
+  },
+  watch: {
+    'listings': function listings() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        if (_this.slider) _this.slider.trigger('destroy.owl.carousel');
+        _this.slider = $('.featured-slider').owlCarousel({
+          loop: true,
+          rewind: true,
+          margin: 15,
+          lazyLoad: true,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+          autoplaySpeed: 2500,
+          responsive: {
+            0: {
+              items: 1,
+              margin: 10,
+              center: true
+            },
+            992: {
+              items: 2
+            },
+            1200: {
+              items: 3
+            },
+            1400: {
+              items: 4
+            },
+            1600: {
+              items: 5
+            }
+          }
+        });
+        var owl = $('.property-slider');
+        owl.owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: false,
+          animateOut: 'fadeOut',
+          responsive: {
+            0: {
+              items: 1,
+              margin: 10,
+              center: true,
+              loop: false
+            },
+            600: {
+              items: 1
+            },
+            1000: {
+              items: 1
+            }
+          }
+        });
+      });
+    }
+  },
+  computed: {},
+  data: function data() {
+    return {
+      show: false,
+      show2: false,
+      select: 0,
+      total: 0,
+      s3_url: process.env.MIX_S3_URL,
+      loading: false,
+      searchfilters: {},
+      errors: {},
+      listings: {},
+      filter: {
+        beds: '',
+        price: '',
+        baths: '',
+        property_type_1: '',
+        search1: '',
+        search: '',
+        search_type: '',
+        sort_by: '',
+        min_price: '',
+        max_price: '',
+        property_type: '',
+        // property_sub_type:[],
+        property_sub_type: '',
+        property_status: '',
+        price_range: '',
+        building_type: '',
+        d_o_m: '',
+        show_only: '',
+        keyword: '' // property_status:[],
+
+      },
+      cuns: {
+        name: '',
+        email: '',
+        phone: '',
+        name2: '',
+        email2: '',
+        phone2: ''
+      }
+    };
+  },
+  methods: {
+    get_lists: function get_lists(filter) {
+      var place = this.filter.search1;
+      window.location.href = '/residential-properties?property_type_1=' + this.filter.property_type_1 + '&place=' + place + '&search_type=' + this.filter.search_type + '&min_price=' + this.filter.min_price + '&max_price=' + this.filter.max_price + '&property_status=' + this.filter.property_status + '&beds=' + this.filter.beds + '&baths=' + this.filter.baths + '&building_type=' + this.filter.building_type + '&d_o_m=' + this.filter.d_o_m + '&show_only=' + this.filter.show_only + '&keyword=' + this.filter.keyword;
+    },
+    get_listings: function get_listings() {
+      var vm = this;
+      vm.loading = true;
+      var url = '/featured-listings';
+      axios.get(url).then(function (response) {
+        vm.listings = response.data;
+        vm.loading = false;
+      })["catch"](function (err) {
+        vm.loading = false;
+      });
+    },
+    type_change: function type_change() {
+      if (this.filter.property_type_1 == "") {
+        this.filter.property_type = [];
+      } else {
+        this.filter.property_type = [];
+        this.filter.property_type[0] = this.filter.property_type_1;
+      }
+    },
+    clear_filter: function clear_filter() {
+      this.filter.beds = '';
+      this.filter.price = '';
+      this.filter.baths = '';
+      this.filter.property_type_1 = '';
+      this.filter.search1 = '';
+      this.filter.search = '';
+      this.filter.search_type = '';
+      this.filter.sort_by = '';
+      this.filter.min_br = '';
+      this.filter.max_br = '';
+      this.filter.min_bath = '';
+      this.filter.max_bath = '';
+      this.filter.min_sqft = '';
+      this.filter.max_sqft = '';
+      this.filter.min_price = '';
+      this.filter.max_price = '';
+      this.filter.yr_built_min = '';
+      this.filter.yr_built_max = '';
+      this.filter.min_lot_size = '';
+      this.filter.max_lot_size = '';
+      this.filter.garage_space = '';
+      this.filter.property_type = '';
+      this.filter.property_sub_type = '';
+      this.filter.property_status = '';
+      this.filter.building_type = '';
+      this.filter.price_range = '';
+      this.filter.d_o_m = '';
+      this.filter.show_only = '';
+      this.filter.keyword = '';
+    },
+    filter_search: function filter_search() {
+      var _this2 = this;
+
+      if (this.filter.search1.length < 3 || this.filter.search1 == '') {
+        this.show2 = false;
+        this.show = false;
+        this.select = 0;
+        return false;
+      } else {
+        if (!isNaN(this.filter.search1.charAt(0))) this.filter.search_type = 'addr';else if (/^[a-zA-Z]{3}/.test(this.filter.search1)) this.filter.search_type = 'municipality';else if (/^[a-zA-Z][0-9]{2}/.test(this.filter.search1)) this.filter.search_type = 'ml_num';
+        axios.get('/filter-search-two', {
+          params: {
+            val: this.filter.search1
+          }
+        }).then(function (response) {
+          if (response.data.length != 0) {
+            // this.show2 = false;
+            _this2.show = true;
+            _this2.searchfilters = response.data;
+          } else {
+            _this2.select = 0;
+            _this2.show = false;
+
+            if (_this2.filter.search1 != '') {
+              _this2.show2 = true;
+            }
+          } // this.loading = false;
+
+        })["catch"](function (err) {// this.loading = false;
+        });
+      }
+    },
+    set_value: function set_value(item) {
+      this.filter.search1 = item.field;
+      this.filter.search_type = item.type;
+      this.select = 1;
+      this.show = false;
+      this.show2 = false;
+      this.get_freeholds();
+    },
+    filter_price: function filter_price() {
+      this.filter.min_price = $('#min_price').val();
+      this.filter.max_price = $('#max_price').val();
+    },
+    exit: function exit() {// if(this.select==0){
+      //       this.filter.search1 ='';
+      //      this.show2 = false;
+      //      this.show = false;
+      //      return false;
+      // }
+    },
+    split: function split(str) {
+      return str.split(",");
+    },
+    strabout: function strabout(str) {
+      return str.substr(0, 400) + "....";
+    },
+    mask: function mask(str) {
+      return "+1" + " " + "(" + str.substr(0, 3) + ")" + " " + str.substr(3, 3) + "-" + str.substr(6, 9);
+    },
+    currency: function currency(num) {
+      return Number(num).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).slice(0, -3);
+    },
+    disableDropDownRangeOptions: function disableDropDownRangeOptions(max_values, minValue) {
+      var formatter = new Intl.NumberFormat('en-US', {
+        maximumSignificantDigits: 3
+      });
+
+      if (max_values) {
+        var minval = parseInt(minValue);
+
+        if (minval < 600000 || minval == '') {
+          var x = 50000;
+          var y = 50000;
+        } else if (minval >= 600000 && minval < 1500000) {
+          var x = 100000;
+          var y = 100000;
+        } else if (minval == 1500000) {
+          var x = 250000;
+          var y = 250000;
+        } else {
+          var x = 500000;
+          var y = 500000;
+        }
+
+        max_values.each(function () {
+          if (this.id != 'maxX') {
+            $(this).attr('value', minval + x);
+            $(this).html('$' + formatter.format(minval + x));
+            x += y;
+          } // if (parseInt(maxValue) < parseInt(minValue)) {
+          //     $(this).addClass('disabled');
+          // } else {
+          //     $(this).removeClass('disabled');
+          // }
+
+        });
+      }
+    },
+    setuinvestRangeDropDownList: function setuinvestRangeDropDownList(min_values, max_values, min_input, max_input, clearLink, dropDownControl) {
+      var vm = this;
+      var formatter = new Intl.NumberFormat('en-US', {
+        maximumSignificantDigits: 3
+      });
+      min_values.click(function () {
+        var minValue = $(this).attr('value');
+        min_input.val(minValue);
+        max_input.val('');
+        vm.filter.min_price = minValue;
+        vm.filter.max_price = '';
+        document.getElementById('price_range1').innerHTML = '$' + formatter.format(minValue);
+        document.getElementById('price_range1').setAttribute('value', minValue);
+        document.getElementById('price_range2').innerHTML = '';
+        document.getElementById('price_range2').setAttribute('value', ''); //Update max values
+
+        vm.disableDropDownRangeOptions(max_values, minValue);
+        vm.validateDropDownInputs();
+      });
+      max_values.click(function () {
+        var maxValue = $(this).attr('value');
+
+        if (maxValue == '') {
+          max_input.val(maxValue);
+          vm.filter.max_price = maxValue;
+          document.getElementById('price_range2').innerHTML = 'Any';
+          document.getElementById('price_range2').setAttribute('value', '');
+        } else {
+          max_input.val(maxValue);
+          vm.filter.max_price = maxValue;
+          document.getElementById('price_range2').innerHTML = '$' + formatter.format(maxValue);
+          document.getElementById('price_range2').setAttribute('value', maxValue);
+        }
+
+        vm.toggleDropDown();
+      });
+      clearLink.click(function () {
+        min_input.val('');
+        max_input.val('');
+        vm.filter.min_price = '';
+        vm.filter.max_price = '';
+        document.getElementById('price_range1').innerHTML = '';
+        document.getElementById('price_range1').setAttribute('value', '');
+        document.getElementById('price_range2').innerHTML = 'Price Range';
+        document.getElementById('price_range2').setAttribute('value', ''); // vm.disableDropDownRangeOptions(max_values);
+
+        vm.validateDropDownInputs();
+      });
+      min_input.on('input', function () {
+        var minValue = min_input.val();
+        vm.filter.min_price = minValue;
+        document.getElementById('price_range1').innerHTML = '$' + minValue;
+        document.getElementById('price_range1').setAttribute('value', minValue);
+        if (minValue != '') vm.disableDropDownRangeOptions(max_values, minValue);
+        vm.validateDropDownInputs();
+      });
+      max_input.on('input', function () {
+        var maxValue = max_input.val();
+        vm.filter.max_price = maxValue;
+        document.getElementById('price_range2').innerHTML = '$' + maxValue;
+        document.getElementById('price_range2').setAttribute('value', maxValue); // vm.disableDropDownRangeOptions(min_values, maxValue);
+
+        vm.validateDropDownInputs();
+      });
+      max_input.blur('input', function () {
+        vm.toggleDropDown();
+      });
+    },
+    toggleDropDown: function toggleDropDown() {
+      if (this.validateDropDownInputs() && parseInt($('.investRange .freeformPrice .min_input').val()) > 0) {
+        // auto close if two values are valid
+        $('.investRange .dropdown-toggle').dropdown('toggle');
+      }
+    },
+    validateDropDownInputs: function validateDropDownInputs() {
+      var minValue = parseInt($('.investRange .freeformPrice .min_input').val());
+      var maxValue = parseInt($('.investRange .freeformPrice .max_input').val());
+
+      if (maxValue > 0 && minValue > 0 && maxValue < minValue) {
+        $('.investRange .freeformPrice .min_input').addClass('inputError');
+        $('.investRange .freeformPrice .max_input').addClass('inputError');
+        return false;
+      } else {
+        $('.investRange .freeformPrice .min_input').removeClass('inputError');
+        $('.investRange .freeformPrice .max_input').removeClass('inputError');
+        return true;
+      }
+    }
+  },
+  mounted: function mounted() {
+    $('input[type=radio][name=type]').change(function () {
+      var isa = this.value;
+      var type = $("#cust_type");
+      var type2 = $("#cust_type2");
+
+      if (isa == 'Buyer & Seller') {
+        type.empty();
+        type.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Buyer">First Time Home Buyer</option>' + '<option value="Foreclosure Home Buyer">Foreclosure Home Buyer</option>' + '<option value="Affordable Home Buyer">Affordable Home Buyer</option>' + '<option value="Pre-development Home Buyer">Pre-development Home Buyer</option>' + '<option value="Pre-construction condo Buyer">Pre-construction condo Buyer</option>' + '<option value="Apartment/Condo Buyer">Apartment/Condo Buyer</option>' + '<option value="Luxury Home Buyer">Luxury Home Buyer</option>' + '<option value="Commercial Buyer">Commercial Buyer</option>' + '<option value="First Time Home Seller">First Time Home Seller</option>' + '<option value="Un-dedicated Home Seller">Un-dedicated Home Seller</option>' + '<option value="Future Home Seller">Future Home Seller</option>');
+        type2.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Buyer">First Time Home Buyer</option>' + '<option value="Foreclosure Home Buyer">Foreclosure Home Buyer</option>' + '<option value="Affordable Home Buyer">Affordable Home Buyer</option>' + '<option value="Pre-development Home Buyer">Pre-development Home Buyer</option>' + '<option value="Pre-construction condo Buyer">Pre-construction condo Buyer</option>' + '<option value="Apartment/Condo Buyer">Apartment/Condo Buyer</option>' + '<option value="Luxury Home Buyer">Luxury Home Buyer</option>' + '<option value="Commercial Buyer">Commercial Buyer</option>' + '<option value="First Time Home Seller">First Time Home Seller</option>' + '<option value="Un-dedicated Home Seller">Un-dedicated Home Seller</option>' + '<option value="Future Home Seller">Future Home Seller</option>');
+      } else if (isa == 'Buyer') {
+        type.empty();
+        type.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Buyer">First Time Home Buyer</option>' + '<option value="Foreclosure Home Buyer">Foreclosure Home Buyer</option>' + '<option value="Affordable Home Buyer">Affordable Home Buyer</option>' + '<option value="Pre-development Home Buyer">Pre-development Home Buyer</option>' + '<option value="Pre-construction condo Buyer">Pre-construction condo Buyer</option>' + '<option value="Apartment/Condo Buyer">Apartment/Condo Buyer</option>' + '<option value="Luxury Home Buyer">Luxury Home Buyer</option>' + '<option value="Commercial Buyer">Commercial Buyer</option>');
+        type2.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Buyer">First Time Home Buyer</option>' + '<option value="Foreclosure Home Buyer">Foreclosure Home Buyer</option>' + '<option value="Affordable Home Buyer">Affordable Home Buyer</option>' + '<option value="Pre-development Home Buyer">Pre-development Home Buyer</option>' + '<option value="Pre-construction condo Buyer">Pre-construction condo Buyer</option>' + '<option value="Apartment/Condo Buyer">Apartment/Condo Buyer</option>' + '<option value="Luxury Home Buyer">Luxury Home Buyer</option>' + '<option value="Commercial Buyer">Commercial Buyer</option>');
+      } else if (isa == 'Seller') {
+        type.empty();
+        type.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Seller">First Time Home Seller</option>' + '<option value="Dedicated Home Seller">Dedicated Home Seller</option>' + '<option value="Un-dedicated Home Seller">Un-dedicated Home Seller</option>' + '<option value="Future Home Seller">Future Home Seller</option>');
+        type2.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="First Time Home Seller">First Time Home Seller</option>' + '<option value="Dedicated Home Seller">Dedicated Home Seller</option>' + '<option value="Un-dedicated Home Seller">Un-dedicated Home Seller</option>' + '<option value="Future Home Seller">Future Home Seller</option>');
+      } else if (isa == 'Renter') {
+        type.empty();
+        type.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="6 Months Lease">6 Months Lease</option>' + '<option value="1 Year Lease">1 Year Lease</option>' + '<option value="1+ Year Lease">1+ Year Lease</option>' + '<option value="Non Contract Lease">Non Contract Lease</option>');
+        type2.append('<option selected="">Type Of Buyer / Seller</option>' + '<option value="6 Months Lease">6 Months Lease</option>' + '<option value="1 Year Lease">1 Year Lease</option>' + '<option value="1+ Year Lease">1+ Year Lease</option>' + '<option value="Non Contract Lease">Non Contract Lease</option>');
+      }
+    });
+    var vm = this;
+    vm.setuinvestRangeDropDownList($('.investRange .min_value'), $('.investRange .max_value'), $('.investRange .freeformPrice .min_input'), $('.investRange .freeformPrice .max_input'), $('.investRange .btnClear'), $('.investRange .dropdown-toggle'));
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e ***!
@@ -19081,17 +19485,240 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=template&id=1d151330":
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=template&id=1d151330 ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "index"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"banner-five\"><div class=\"owl-carousel owl-theme banner-slider-five\"><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner1.jpg&#39;);\"></div><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner2.jpg&#39;);\"></div><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner3.jpg&#39;);\"></div></div></div><div class=\"container\"><h3 class=\"common-head\">FEATURED <span style=\"color:red;\">PROFILES</span></h3><div class=\"row mt-40\"><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team1.jpg\" alt=\"\"><h3 class=\"title\">Arjun Saji</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team2.jpg\" alt=\"\" class=\"img-thumbn\"><h3 class=\"title\">Sujil Kumar K.M</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team3.jpg\" alt=\"\"><h3 class=\"title\">Shruthi S</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div></div><div class=\"row mt-40\">k <div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team4.jpg\" alt=\"\"><h3 class=\"title\">Arjun Saji</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team5.jpg\" alt=\"\" class=\"img-thumbn\"><h3 class=\"title\">Sujil Kumar K.M</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div></div></div>", 2);
+
+var _hoisted_4 = {
+  key: 0,
+  "class": "our-team"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container\"><div class=\"row\"><div class=\"col-sm-6 my-auto\"><h3 class=\"common-head\">OUR <span style=\"color:red;\">TEAM</span></h3></div><!--&lt;div class=&quot;col-sm-6 my-auto&quot;&gt;\n                        &lt;a href=&quot;&quot; class=&quot;view-all&quot;&gt;view all&lt;/a&gt;\n                    &lt;/div&gt;--></div></div>", 1);
+
+var _hoisted_6 = {
+  "class": "left-container"
+};
+var _hoisted_7 = {
+  "class": "owl-carousel owl-theme our-team-slider"
+};
+var _hoisted_8 = {
+  "class": "item"
+};
+var _hoisted_9 = {
+  "class": "team"
+};
+var _hoisted_10 = {
+  "class": "image"
+};
+var _hoisted_11 = ["href"];
+var _hoisted_12 = ["src"];
+var _hoisted_13 = {
+  "class": "social-media"
+};
+var _hoisted_14 = ["href"];
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-facebook",
+  "aria-hidden": "true"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_16 = [_hoisted_15];
+var _hoisted_17 = ["href"];
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-twitter",
+  "aria-hidden": "true"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_19 = [_hoisted_18];
+var _hoisted_20 = ["href"];
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-linkedin",
+  "aria-hidden": "true"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_22 = [_hoisted_21];
+var _hoisted_23 = ["href"];
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-instagram",
+  "aria-hidden": "true"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_25 = [_hoisted_24];
+var _hoisted_26 = {
+  "class": "details"
+};
+var _hoisted_27 = ["href"];
+var _hoisted_28 = {
+  "class": "index-about"
+};
+var _hoisted_29 = {
+  "class": "container"
+};
+
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("About us");
+
+var _hoisted_31 = ["innerHTML"];
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "/about",
+  "class": "join-now"
+}, "read more", -1
+/* HOISTED */
+);
+
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "reports"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "container"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+  "class": "common-head"
+}, "FREE REAL ESTATE REPORTS"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Get exclusive VIP reports to help you with your next purchase or sale and learn how to invest"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" your time and money wisely in the market!")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  action: "",
+  method: "post",
+  "class": "contact-form"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "text",
+  placeholder: "First name",
+  name: "name",
+  "class": "form-control",
+  required: ""
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "text",
+  placeholder: "Phone",
+  name: "phone",
+  "class": "form-control",
+  "data-inputmask": "\"mask\": \"+1 (999) 999-9999\"",
+  "data-mask": "",
+  "data-inputmask-clearincomplete": "true",
+  required: ""
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "email",
+  placeholder: "Email",
+  name: "email",
+  "class": "form-control",
+  required: ""
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "form-control",
+  id: "submit",
+  style: {
+    "color": "white"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/assets/img/submit-arrow.svg",
+  alt: ""
+})])])])], -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_H3 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("H3");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"banner\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <img src=\"/assets/img/banner-realty.jpg\" alt=\"\" class=\"img-fluid w-100\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), _hoisted_2, $props.profiles.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.profiles, function (profile, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: '/profile?name=' + profile.name
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: '/' + profile.cover_photo,
+      alt: "",
+      "class": "img-fluid"
+    }, null, 8
+    /* PROPS */
+    , _hoisted_12)], 8
+    /* PROPS */
+    , _hoisted_11), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: profile.facebook,
+      target: "_blank"
+    }, _hoisted_16, 8
+    /* PROPS */
+    , _hoisted_14)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: profile.twitter,
+      target: "_blank"
+    }, _hoisted_19, 8
+    /* PROPS */
+    , _hoisted_17)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: profile.linkedin,
+      target: "_blank"
+    }, _hoisted_22, 8
+    /* PROPS */
+    , _hoisted_20)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: profile.instagram,
+      target: "_blank"
+    }, _hoisted_25, 8
+    /* PROPS */
+    , _hoisted_23)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(profile.name), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(profile.designation), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: 'tel:' + profile.phone,
+      "class": "phone"
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.mask(profile.phone)), 9
+    /* TEXT, PROPS */
+    , _hoisted_27)])])]);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_H3, {
+    "class": "common-head"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_30];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), $props.site_details.about_us ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", {
+    key: 0,
+    innerHTML: $options.strabout($props.site_details.about_us)
+  }, null, 8
+  /* PROPS */
+  , _hoisted_31)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_32])]), _hoisted_33]);
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "bus": () => (/* binding */ bus)
+/* harmony export */ });
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+window.bus = new Vue();
+var bus = new Vue();
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -19103,6 +19730,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bun
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
+Vue.component('home', __webpack_require__(/*! ./components/front/Home.vue */ "./resources/js/components/front/Home.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -54592,6 +55220,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/front/Home.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/front/Home.vue ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Home_vue_vue_type_template_id_1d151330__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=1d151330 */ "./resources/js/components/front/Home.vue?vue&type=template&id=1d151330");
+/* harmony import */ var _Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js */ "./resources/js/components/front/Home.vue?vue&type=script&lang=js");
+/* harmony import */ var E_Dessertation_suicide_laravel_admin_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_Dessertation_suicide_laravel_admin_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__.default)(_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default, [['render',_Home_vue_vue_type_template_id_1d151330__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/front/Home.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js ***!
@@ -54608,6 +55264,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/front/Home.vue?vue&type=script&lang=js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/front/Home.vue?vue&type=script&lang=js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Home.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e":
 /*!************************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e ***!
@@ -54620,6 +55292,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ExampleComponent.vue?vue&type=template&id=299e239e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/front/Home.vue?vue&type=template&id=1d151330":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/front/Home.vue?vue&type=template&id=1d151330 ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_template_id_1d151330__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_template_id_1d151330__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Home.vue?vue&type=template&id=1d151330 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/front/Home.vue?vue&type=template&id=1d151330");
 
 
 /***/ }),

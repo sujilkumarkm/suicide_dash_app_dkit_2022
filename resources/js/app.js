@@ -1,9 +1,9 @@
 require('./bootstrap');
 
 
-require('./bootstrap');
-
 window.Vue = require('vue');
+window.bus = new Vue();
+export const bus = new Vue();
 
 /**
  * The following block of code may be used to automatically register your
@@ -17,6 +17,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('home', require('./components/front/Home.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

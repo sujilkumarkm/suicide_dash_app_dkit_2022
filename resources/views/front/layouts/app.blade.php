@@ -14,7 +14,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('description')"/>
-    <meta property="og:image" content="@yield('og_image','/assets/img/mat_logo.png')"/>
+    <meta property="og:image" content="@yield('og_image','/assets/img/logo.png')"/>
     <meta name="csrf-token" content="<?= csrf_token() ?>">
     <!-- SEO META TAGS -->
 
@@ -37,7 +37,7 @@
     <!-- STYLESHEET CDN -->
 
     <!-- STYLESHEET INTERNAL -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}?v0.2">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/narayam.css')}}?v0.2">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.theme.default.min.css')}}">
     <!-- STYLESHEET INTERNAL -->
@@ -74,7 +74,7 @@
 <nav class="navbar navbar-expand-xl smart-scroll navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="{{asset('assets/img/mat_logo.png')}}" class="img-fluid" style="max-height:80px !important;" alt="Logo">
+            <img src="{{asset('assets/img/logo.png')}}" class="img-fluid" style="max-height:80px !important;" alt="Logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -243,7 +243,7 @@
                         <div class="designed">
                             <div class="logo">
                             <a  href="https://narayam.net" target="_blank">
-                                <img src="{{asset('assets/img/footer-mat_logo.png')}}" alt="" style="max-width:150px;" class="img-fluid"></a>
+                                <img src="{{asset('assets/img/footer-logo.png')}}" alt="" style="max-width:150px;" class="img-fluid"></a>
                             </div>
                             <!-- <p class="text-center">Designed by Narayam</p> -->
                             <p class="text-center">Trusted listing from narayam</p>
@@ -255,9 +255,9 @@
                 <div class="row">
                     <div class="col-sm-7">
                         <ul class="list-inline more-links">
-                            <li class="list-inline-item">© Copyright 2021 www.narayam.net</li>
+                            <li class="list-inline-item">© Copyright 2021 www.dkit.ie.narayam.nett</li>
                             <!-- <li class="list-inline-item"><a href="">Sitemap</a></li> -->
-                            <li class="list-inline-item"><a href="{{route('login')}}" target="_blank"> Admin Login</a></li>
+                            <li class="list-inline-item"><a href="{{route('admin.login')}}" target="_blank"> Admin Login</a></li>
 
                         </ul>
                     </div>
