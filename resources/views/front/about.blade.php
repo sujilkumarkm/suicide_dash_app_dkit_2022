@@ -20,9 +20,9 @@
                             <div class="bg-block">
                                 <h3>DKIT Suicide Dash App</h3>
                                 <h4>MSc, Data Analytics</h4>
-                                <a href="tel:+353{{$data['site_details']->phone_2}}" style="font-size:15px;"><img src="{{asset('assets/img/call.png')}}" alt="Call Icon" style="width:13px;height:12px;">+353 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_2,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
-                                <a href="mailto:{{$data['site_details']->email_2}}" style="font-size:15px;" target="_blank"><img src="{{asset('assets/img/email.png')}}" style="width:13px;height:12px;"
-                                                                                              alt="Email Icon">{{$data['site_details']->email_2}}</a>
+                                <a href="tel:+353{{$data['site_details']->phone_1}}" style="font-size:15px;"><img src="{{asset('assets/img/call.png')}}" alt="Call Icon" style="width:13px;height:12px;">+353 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
+                                <a href="mailto:{{$data['site_details']->email_1}}" style="font-size:15px;" target="_blank"><img src="{{asset('assets/img/email.png')}}" style="width:13px;height:12px;"
+                                                                                              alt="Email Icon">{{$data['site_details']->email_1}}</a>
                             </div>
                         </div>
                     </div>
