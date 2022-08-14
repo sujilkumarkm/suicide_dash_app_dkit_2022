@@ -202,7 +202,7 @@ input.inputError:focus {
   position: absolute;
   right: 15px;
   top: 15px;
-  background: #DC0017;
+  background: #69665e;
   color: #FFFFFF;
   text-transform: uppercase;
   padding: 2px 5px;
@@ -326,7 +326,7 @@ input.inputError:focus {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   text-align: center;
   margin: 3px auto 0 auto;
@@ -367,11 +367,11 @@ input.inputError:focus {
 }
 
 .pretty input:checked ~ .state.p-primary-o label:before, .pretty.p-toggle .state.p-primary-o label:before {
-  border-color: #DC0017 !important;
+  border-color: #69665e !important;
 }
 
 .pretty.p-default:not(.p-fill) input:checked ~ .state.p-primary-o label:after {
-  background-color: #DC0017 !important;
+  background-color: #69665e !important;
 }
 
 #consultation-modal {
@@ -382,7 +382,7 @@ input.inputError:focus {
   margin: 0 auto;
 }
 #consultation-modal .modal-dialog .modal-content {
-  background: #DC0017;
+  background: #69665e;
   width: 100%;
   height: auto;
   border: none;
@@ -501,7 +501,7 @@ input.inputError:focus {
   margin: 0 auto;
 }
 #thanks-modal .modal-dialog .modal-content {
-  background: #DC0017;
+  background: #69665e;
   width: 100%;
   height: auto;
   border: none;
@@ -602,7 +602,7 @@ input.inputError:focus {
   margin-bottom: 15px;
 }
 #request-info-modal .modal-dialog .modal-content form input[type=submit] {
-  background: #DC0017;
+  background: #69665e;
   color: #ffffff;
   font-size: 17px;
   font-weight: 500;
@@ -622,13 +622,13 @@ input.inputError:focus {
   color: #002753;
 }
 #request-info-modal .modal-dialog .modal-content form .pretty .state label:before {
-  border-color: #DC0017;
+  border-color: #69665e;
   height: 14px;
   width: 14px;
   top: 2px;
 }
 #request-info-modal .modal-dialog .modal-content form .pretty.p-default input:checked ~ .state label:after {
-  background-color: #DC0017 !important;
+  background-color: #69665e !important;
   height: 10px;
   width: 10px;
   transform: scale(1);
@@ -855,7 +855,7 @@ h3.common-head {
   margin-bottom: 15px;
   position: relative;
   height: 61px;
-  border: 2px solid #DC0017;
+  border: 2px solid #69665e;
   max-width: 1000px;
   margin: 30px auto;
   width: 100%;
@@ -885,7 +885,7 @@ h3.common-head {
   float: left;
   display: inline-block;
   width: 20%;
-  border-right: 2px solid #DC0017;
+  border-right: 2px solid #69665e;
   border-radius: 0;
 }
 .find-property .search-by-top select:focus, .find-property .search-by-top .ui-selectmenu-button.ui-button:focus {
@@ -899,7 +899,7 @@ h3.common-head {
   width: 200px;
   height: 58px;
   float: right;
-  background: #DC0017;
+  background: #69665e;
   color: #FFFFFF;
   outline: none;
   border: none;
@@ -983,7 +983,7 @@ h3.common-head {
 .find-property .search-by-bottom .keywords input[type=submit] {
   width: 15%;
   text-align: center;
-  background: #DC0017;
+  background: #69665e;
   border: none;
   color: #FFFFFF;
   float: right;
@@ -1005,7 +1005,7 @@ h3.common-head {
   background: #E2E2E2;
 }
 .find-property .search-by-bottom .price-range .ui-widget-header {
-  background: #DC0017;
+  background: #69665e;
   height: 7px;
 }
 .find-property .search-by-bottom .price-range span.ui-slider-handle.ui-corner-all.ui-state-default {
@@ -1069,7 +1069,7 @@ h3.common-head {
   min-height: auto !important;
 }
 .index .find-property-sec {
-  background-color: #DC0017;
+  background-color: #69665e;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -1442,13 +1442,13 @@ h3.common-head {
   margin-right: 5px;
 }
 .index .search-by-city .city-slider .owl-dots button:hover span {
-  background-color: #DC0017;
+  background-color: #69665e;
 }
 .index .search-by-city .city-slider .owl-dots button.active {
   transition: all 0.3s;
 }
 .index .search-by-city .city-slider .owl-dots button.active span {
-  background-color: #DC0017;
+  background-color: #69665e;
   width: 31px;
 }
 .index .search-by-city .city-slider .owl-dots button span {
@@ -1485,7 +1485,7 @@ h3.common-head {
   list-style: none;
   padding: 10px 5px;
   text-align: center;
-  background-color: #DC0017;
+  background-color: #69665e;
   margin-bottom: 0;
   transition: all 0.25s;
 }
@@ -1604,7 +1604,7 @@ h3.common-head {
 .index .awards .awards-slider .award .details h4 {
   font-size: 16px;
   font-weight: 700;
-  color: #DC0017;
+  color: #69665e;
   text-transform: uppercase;
   margin: 15px 0 10px 0;
 }
@@ -1623,7 +1623,7 @@ h3.common-head {
   margin-top: 25px !important;
 }
 .index .awards .awards-slider .owl-dots button {
-  border: 1px solid #DC0017 !important;
+  border: 1px solid #69665e !important;
   transition: all 0.3s;
   outline: none;
   box-shadow: none;
@@ -1636,7 +1636,7 @@ h3.common-head {
   transition: all 0.3s;
 }
 .index .awards .awards-slider .owl-dots button.active span, .index .awards .awards-slider .owl-dots button:hover span {
-  background-color: #DC0017;
+  background-color: #69665e;
 }
 .index .awards .awards-slider .owl-dots button span {
   background: #FFFFFF;
@@ -1744,7 +1744,7 @@ h3.common-head {
 }
 .index .full-width-form-block .block .inner-content form button {
   margin-bottom: 0 !important;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 700;
@@ -1834,7 +1834,7 @@ h3.common-head {
   display: inline-block;
   width: 64px;
   height: 53px;
-  background-color: #DC0017;
+  background-color: #69665e;
   border: 0;
 }
 
@@ -1986,7 +1986,7 @@ h3.common-head {
 }
 .profile .profile-inner form button {
   width: 194px;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-size: 15px;
   font-weight: 600;
@@ -2169,7 +2169,7 @@ h3.common-head {
 }
 .property-value-page .page-inner form input[type=submit] {
   color: #FFFFFF;
-  background: #DC0017;
+  background: #69665e;
   max-width: 192px;
   width: 100%;
   height: 47px;
@@ -2201,7 +2201,7 @@ h3.common-head {
 
 .page-header {
   padding: 50px;
-  background: #DC0017;
+  background: #69665e;
 }
 .page-header h2 {
   color: #FFFFFF;
@@ -2244,7 +2244,7 @@ h3.common-head {
   display: inline-block;
   color: #FFFFFF;
   text-transform: uppercase;
-  background: #DC0017;
+  background: #69665e;
   padding: 10px 25px;
   font-size: 14px;
   margin-bottom: 10px;
@@ -2540,7 +2540,7 @@ h3.common-head {
   display: inline-block;
   color: #FFFFFF;
   text-transform: uppercase;
-  background: #DC0017;
+  background: #69665e;
   padding: 10px 25px;
   font-size: 14px;
 }
@@ -2728,7 +2728,7 @@ h3.common-head {
   transition: all 0.25s;
 }
 .property-detail .property-detail-inner .property-main ul.social li a:hover {
-  background-color: #DC0017;
+  background-color: #69665e;
 }
 .property-detail .property-detail-inner .property-main ul.social li a:hover .fa {
   color: #FFFFFF;
@@ -2791,7 +2791,7 @@ h3.common-head {
 }
 .property-detail .property-detail-inner .bg-common .property .property-image span.sale {
   color: #FFFFFF;
-  background: #DC0017;
+  background: #69665e;
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 12px;
@@ -3010,7 +3010,7 @@ h3.common-head {
   border-bottom: 1px solid #D8D8D8;
 }
 .property-detail .property-detail-inner .bg-common .price-history p a {
-  color: #DC0017;
+  color: #69665e;
   font-weight: 700;
 }
 .property-detail .property-detail-inner .bg-common .price-history p img {
@@ -3099,12 +3099,12 @@ h3.common-head {
   left: 0;
   bottom: 0;
   content: "";
-  background: #DC0017;
+  background: #69665e;
   transition: all 0.2s;
 }
 .property-detail .property-detail-inner .bg-common .neighbourhood .tab-section .nav-tabs .nav-item .nav-link.active, .property-detail .property-detail-inner .bg-common .neighbourhood .tab-section .nav-tabs .nav-item .nav-link:hover {
   border: none;
-  color: #DC0017;
+  color: #69665e;
   transition: all 0.2s;
   background: transparent;
 }
@@ -3444,7 +3444,7 @@ h3.common-head {
   left: 0;
   top: 5px;
   content: "";
-  background: #DC0017;
+  background: #69665e;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -3465,7 +3465,7 @@ h3.common-head {
   color: #FFFFFF;
   display: block;
   text-align: center;
-  background: #DC0017;
+  background: #69665e;
   font-size: 20px;
   font-weight: 600;
   padding: 10px;
@@ -3579,7 +3579,7 @@ h3.common-head {
   height: 108px !important;
 }
 .property-detail .property-detail-inner .ask-home form input[type=submit] {
-  background: #DC0017;
+  background: #69665e;
   color: #FFFFFF;
   border-radius: 4px;
   height: 47px;
@@ -3727,7 +3727,7 @@ h3.common-head {
   background: #EFEFEF;
 }
 .pre-construction .page-inner .registration form input[type=submit] {
-  background: #DC0017;
+  background: #69665e;
   color: #ffffff;
   font-size: 17px;
 }
@@ -3741,7 +3741,7 @@ h3.common-head {
 }
 .pre-construction .page-inner .registration form .pretty .state label {
   font-size: 17px;
-  color: #DC0017;
+  color: #69665e;
 }
 .pre-construction .page-inner .registration form .pretty .state label:before {
   border-color: #ACABB2;
@@ -3750,7 +3750,7 @@ h3.common-head {
   top: 2px;
 }
 .pre-construction .page-inner .registration form .pretty.p-default input:checked ~ .state label:after {
-  background-color: #DC0017 !important;
+  background-color: #69665e !important;
   height: 10px;
   width: 10px;
   transform: scale(1);
@@ -3800,7 +3800,7 @@ h3.common-head {
 }
 .inner-page .page-inner .form-block form input[type=submit] {
   text-transform: uppercase;
-  background: #DC0017;
+  background: #69665e;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -3817,7 +3817,7 @@ h3.common-head {
   position: relative;
   margin-top: -1px;
   padding: 30px 20px;
-  background: #DC0017;
+  background: #69665e;
 }
 .about-us .page-inner .left-block .bg-block h3 {
   color: #FFFFFF;
@@ -3908,17 +3908,17 @@ h3.common-head {
 .contact-page .page-inner .block-left h4 {
   font-size: 37px;
   margin-top: 15px;
-  color: #DC0017;
+  color: #69665e;
   letter-spacing: 3px;
 }
 .contact-page .page-inner .block-left h5 {
   font-size: 22px;
-  color: #DC0017;
+  color: #69665e;
 }
 .contact-page .page-inner .block-left a {
   display: block;
   font-size: 19px;
-  color: #DC0017;
+  color: #69665e;
   margin-bottom: 5px;
 }
 .contact-page .page-inner .block-left a img {
@@ -3945,7 +3945,7 @@ h3.common-head {
 }
 .contact-page .page-inner .contact-block form input[type=submit] {
   color: #FFFFFF;
-  background: #DC0017;
+  background: #69665e;
   text-transform: uppercase;
   height: 47px;
   max-width: 192px;
@@ -3976,7 +3976,7 @@ h3.common-head {
   padding-right: 50px;
 }
 .contact-page .page-inner .contact-block form .radio-buttons-group .pretty.p-default:not(.p-fill) input:checked ~ .state.p-primary-o label:after {
-  background-color: #DC0017 !important;
+  background-color: #69665e !important;
 }
 .contact-page .page-inner .contact-block form .radio-buttons-group .pretty {
   margin-bottom: 15px;
@@ -4004,7 +4004,7 @@ h3.common-head {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #DC0017;
+  background-color: #69665e;
   padding: 20px 15px 10px 15px;
   z-index: 2;
 }
@@ -4019,7 +4019,7 @@ h3.common-head {
   text-transform: uppercase;
   font-weight: 500;
   padding-bottom: 5px;
-  border-bottom: 3px solid #DC0017;
+  border-bottom: 3px solid #69665e;
   display: block;
 }
 .pre-construction-detail .prop-detail .inner-content {
@@ -4095,12 +4095,12 @@ h3.common-head {
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: #DC0017;
+  background-color: #69665e;
   content: "";
   transition: all 0.2s;
 }
 .pre-construction-detail .prop-detail .inner-content .block .tab-section ul.nav-tabs.main li a.active {
-  color: #DC0017;
+  color: #69665e;
 }
 .pre-construction-detail .prop-detail .inner-content .block .tab-section ul.nav-tabs.main li a.active:after {
   width: 100%;
@@ -4121,8 +4121,8 @@ h3.common-head {
   font-weight: bold;
 }
 .pre-construction-detail .prop-detail .inner-content .block .tab-section .tab-content ul.nav-tabs li a.active {
-  border-color: #DC0017;
-  color: #DC0017;
+  border-color: #69665e;
+  color: #69665e;
 }
 .pre-construction-detail .prop-detail .inner-content .block .tab-section .tab-content .prop-block {
   width: 100%;
@@ -4222,17 +4222,17 @@ h3.common-head {
   color: #cccccc;
 }
 .pre-construction-detail .prop-detail .inner-content .block a.button-common {
-  border: 1px solid #DC0017;
+  border: 1px solid #69665e;
   padding: 5px 15px;
   display: block;
   width: max-content;
   border-radius: 3px;
-  color: #DC0017;
+  color: #69665e;
   background-color: #FFFFFF;
   transition: all 0.25s;
 }
 .pre-construction-detail .prop-detail .inner-content .block a.button-common:hover, .pre-construction-detail .prop-detail .inner-content .block a.button-common.active {
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
 }
 .pre-construction-detail .prop-detail .inner-content .block a.button-common:hover .fa, .pre-construction-detail .prop-detail .inner-content .block a.button-common.active .fa {
@@ -4275,7 +4275,7 @@ h3.common-head {
   font-size: 16px;
 }
 .pre-construction-detail .prop-detail .inner-content .block.floor-plan-and-pricing .form form button {
-  background: #DC0017 !important;
+  background: #69665e !important;
   color: #FFFFFF !important;
   text-transform: uppercase;
   margin-bottom: 0 !important;
@@ -4416,7 +4416,7 @@ h3.common-head {
   left: 10px;
   bottom: 10px;
   font-size: 15px;
-  background: #DC0017;
+  background: #69665e;
   padding: 3px 15px;
   position: absolute;
   border-radius: 4px;
@@ -4443,7 +4443,7 @@ h3.common-head {
   background: #EFEFEF;
 }
 .pre-construction-detail .registration form input[type=submit] {
-  background: #DC0017;
+  background: #69665e;
   color: #ffffff;
   font-size: 17px;
   font-weight: 500;
@@ -4533,7 +4533,7 @@ h3.common-head {
 }
 .home-evaluation .banner .banner-form form button {
   width: 239px;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 700;
@@ -4547,13 +4547,13 @@ h3.common-head {
 .home-evaluation .find h3 {
   font-size: 31px;
   font-weight: 700;
-  color: #DC0017;
+  color: #69665e;
 }
 .home-evaluation .find a.see-listings {
   display: block;
   width: 239px;
   margin: 30px auto 0 auto;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   height: 65px;
   font-weight: 600;
@@ -4575,14 +4575,14 @@ h3.common-head {
 .home-evaluation .get-you-ready .inner-content span {
   font-size: 14px;
   font-weight: 600;
-  color: #DC0017;
+  color: #69665e;
   margin-bottom: 15px;
   display: block;
 }
 .home-evaluation .get-you-ready .inner-content h3 {
   font-weight: 600;
   font-size: 31px;
-  color: #DC0017;
+  color: #69665e;
   margin: 20px 0;
 }
 .home-evaluation .get-you-ready .inner-content p {
@@ -4606,7 +4606,7 @@ h3.common-head {
 .home-evaluation .get-you-ready .inner-content .block h4 {
   font-weight: 700;
   font-size: 16px;
-  color: #DC0017;
+  color: #69665e;
 }
 .home-evaluation .get-you-ready .inner-content .block p {
   font-size: 15px;
@@ -4620,7 +4620,7 @@ h3.common-head {
 .home-evaluation .get-in-touch .inner-content h3 {
   font-size: 31px;
   font-weight: 700;
-  color: #DC0017;
+  color: #69665e;
 }
 .home-evaluation .get-in-touch .inner-content form {
   padding: 15px 0;
@@ -4681,7 +4681,7 @@ h3.common-head {
 }
 .home-evaluation .get-in-touch .inner-content form button {
   width: 194px;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-size: 15px;
   font-weight: 600;
@@ -4718,7 +4718,7 @@ h3.common-head {
   display: block;
   padding: 20px 50px;
   color: #FFFFFF;
-  background-color: #DC0017;
+  background-color: #69665e;
   border-radius: 3px;
   text-align: center;
   width: fit-content;
@@ -5002,7 +5002,7 @@ h3.common-head {
 }
 .neighbourhood-buzzer .banner-form form button {
   width: 239px;
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 700;
@@ -5288,7 +5288,7 @@ h3.common-head {
 .unsubscribe-page .inner-content h1 {
   font-weight: 700;
   text-transform: uppercase;
-  color: #DC0017;
+  color: #69665e;
   margin-bottom: 15px;
   font-size: 40px;
 }
@@ -5711,7 +5711,7 @@ h3.common-head {
   .find-property .search-by-top select, .find-property .search-by-top .ui-selectmenu-button.ui-button {
     width: 100%;
     display: block;
-    border: 2px solid #DC0017;
+    border: 2px solid #69665e;
     margin-bottom: 15px;
     border-radius: 0;
   }
@@ -5719,7 +5719,7 @@ h3.common-head {
     width: 100%;
     display: block;
     position: initial;
-    border: 2px solid #DC0017;
+    border: 2px solid #69665e;
     margin-bottom: 15px;
     border-radius: 0;
   }
@@ -5781,7 +5781,7 @@ h3.common-head {
   }
   #consultation-modal .modal-dialog .modal-content .body-inner p.name {
     text-transform: uppercase;
-    background: #DC0017;
+    background: #69665e;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -5827,7 +5827,7 @@ h3.common-head {
   }
   #thanks-modal .modal-dialog .modal-content .body-inner p.name {
     text-transform: uppercase;
-    background: #DC0017;
+    background: #69665e;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -5996,7 +5996,7 @@ h3.common-head {
     position: initial;
     transform: none;
     padding: 20px 15px;
-    background-color: #DC0017;
+    background-color: #69665e;
     text-align: center;
   }
   .index .banner .banner-caption h1 {
@@ -6748,7 +6748,7 @@ h3.common-head {
   padding: 10px 20px;
 }
 .index .banner-five .banner-content .tab-block .nav-tabs li.nav-item a.nav-link.active {
-  background-color: #DC0017;
+  background-color: #69665e;
 }
 .index .banner-five .banner-content .tab-block .tab-content {
   width: 100%;
@@ -6771,7 +6771,7 @@ h3.common-head {
   background-color: #FFFFFF;
 }
 .index .banner-five .banner-content .tab-block .tab-content form button {
-  background-color: #DC0017;
+  background-color: #69665e;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
