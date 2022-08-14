@@ -51,6 +51,8 @@ Route::prefix('admin')->group(function() {
   //   settings
   Route::get('/settings/{id}', [AdminHomeController::class,'settings'])->name('settings');
   Route::post('/admin/site-details', [AdminHomeController::class,'sitedetails'])->name('site-details');
+  Route::get('/admin/about/{id}',[AdminHomeController::class,'about'])->name('about-page');
+  Route::post('/admin/about/update',[AdminHomeController::class,'aboutUpdate'])->name('site.about');
   Route::get('/register', [AdminRegisterController::class, 'showRegistrationForm'])->name('admin.register');
   Route::post('/register', [AdminRegisterController::class, 'register'])->name('admin.register.submit');
 

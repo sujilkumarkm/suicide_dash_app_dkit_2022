@@ -30,6 +30,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('about-page',1)}}" class="nav-link">
+                    <i class="nav-icon fa fa-file"></i>
+                        <p>
+                            About page
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-home"></i>

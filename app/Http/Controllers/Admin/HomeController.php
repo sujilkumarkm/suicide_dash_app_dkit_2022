@@ -69,4 +69,16 @@ class HomeController extends Controller
 
         return back()->with('success','Details Add Successfully');
     }
+    public function about($id)
+    {
+        $site_details=SiteDetails::where('id',$id)->first();
+        return view('admin.about-page',['site_details'=>$site_details,'id'=>$id]);
+    }
+    public function aboutUpdate(Request $request)
+    {
+        $site_details=SiteDetails::where('id',$request->id)->first();
+        $data['about_us']=$request->about_us;
+        $site_details->update($data);
+        return back()->with('success','Abouted aded Successfully');
+    }
 }
