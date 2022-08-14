@@ -38,7 +38,7 @@
                                     <input type="email" placeholder="Email" name="email" class="form-control" required>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="tel" placeholder="Phone Number" name="phone" class="form-control" data-inputmask='"mask": "+1 (999) 999-9999"' data-mask data-inputmask-clearincomplete="true" required>
+                                    <input type="tel" placeholder="Phone Number" name="phone" class="form-control" data-inputmask='"mask": "+353 (999) 999-9999"' data-mask data-inputmask-clearincomplete="true" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <textarea rows="4" cols="50" name="message" placeholder="Message"></textarea>
