@@ -37,6 +37,7 @@
     <!-- STYLESHEET CDN -->
 
     <!-- STYLESHEET INTERNAL -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/narayam.css')}}?v0.2">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.theme.default.min.css')}}">
@@ -56,7 +57,7 @@
     <!--SCRIPTS INTERNAL -->
     <script src="{{asset('assets/js/owl.carousel.js')}}"></script>
     <script src="{{asset('assets/js/script.js')}}"></script>
-    <script defer src="{{ asset('js/app.js') }}?v0.1" type="text/javascript"></script>
+    <script defer src="{{ mix('js/app.js') }}"></script>
     <!--SCRIPTS INTERNAL -->
 
     <!-- RECAPTCHA -->

@@ -13,6 +13,7 @@
     ></home>
 
  </section>
+ <h1>SUICIDE DASH APPLICATION DKIT 2022</h1>
 @endsection
 @push('scripts')
 @endpush

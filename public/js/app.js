@@ -19066,7 +19066,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'owl.carousel/dist/assets/owl.carousel.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'owl.carousel/dist//assets/owl.carousel.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 Object(function webpackMissingModule() { var e = new Error("Cannot find module 'owl.carousel'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
 
@@ -19502,193 +19502,34 @@ var _hoisted_1 = {
   "class": "index"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"banner-five\"><div class=\"owl-carousel owl-theme banner-slider-five\"><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner1.jpg&#39;);\"></div><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner2.jpg&#39;);\"></div><div class=\"item\" style=\"background-image:url(&#39;/assets/img/banner3.jpg&#39;);\"></div></div></div><div class=\"container\"><h3 class=\"common-head\">FEATURED <span style=\"color:red;\">PROFILES</span></h3><div class=\"row mt-40\"><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team1.jpg\" alt=\"\"><h3 class=\"title\">Arjun Saji</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team2.jpg\" alt=\"\" class=\"img-thumbn\"><h3 class=\"title\">Sujil Kumar K.M</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team3.jpg\" alt=\"\"><h3 class=\"title\">Shruthi S</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div></div><div class=\"row mt-40\">k <div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team4.jpg\" alt=\"\"><h3 class=\"title\">Arjun Saji</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team5.jpg\" alt=\"\" class=\"img-thumbn\"><h3 class=\"title\">Sujil Kumar K.M</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div></div></div>", 2);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"banner\"><img src=\"/assets/img/banner-realty.jpg\" alt=\"\" class=\"img-fluid w-100\"></div><div class=\"container\"><h3 class=\"common-head\">FEATURED <span style=\"color:red;\">PROFILES</span></h3><div class=\"row mt-40\"><div class=\"col-md-4 col-sm-6\"><div class=\"box1\"><img src=\"/assets/img/our-team1.jpg\" alt=\"\"><h3 class=\"title\">Arjun Saji</h3><ul class=\"icon\"><li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></li><li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li></ul></div></div></div></div>", 2);
 
 var _hoisted_4 = {
-  key: 0,
-  "class": "our-team"
-};
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container\"><div class=\"row\"><div class=\"col-sm-6 my-auto\"><h3 class=\"common-head\">OUR <span style=\"color:red;\">TEAM</span></h3></div><!--&lt;div class=&quot;col-sm-6 my-auto&quot;&gt;\n                        &lt;a href=&quot;&quot; class=&quot;view-all&quot;&gt;view all&lt;/a&gt;\n                    &lt;/div&gt;--></div></div>", 1);
-
-var _hoisted_6 = {
-  "class": "left-container"
-};
-var _hoisted_7 = {
-  "class": "owl-carousel owl-theme our-team-slider"
-};
-var _hoisted_8 = {
-  "class": "item"
-};
-var _hoisted_9 = {
-  "class": "team"
-};
-var _hoisted_10 = {
-  "class": "image"
-};
-var _hoisted_11 = ["href"];
-var _hoisted_12 = ["src"];
-var _hoisted_13 = {
-  "class": "social-media"
-};
-var _hoisted_14 = ["href"];
-
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-facebook",
-  "aria-hidden": "true"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_16 = [_hoisted_15];
-var _hoisted_17 = ["href"];
-
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-twitter",
-  "aria-hidden": "true"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_19 = [_hoisted_18];
-var _hoisted_20 = ["href"];
-
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-linkedin",
-  "aria-hidden": "true"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_22 = [_hoisted_21];
-var _hoisted_23 = ["href"];
-
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-instagram",
-  "aria-hidden": "true"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_25 = [_hoisted_24];
-var _hoisted_26 = {
-  "class": "details"
-};
-var _hoisted_27 = ["href"];
-var _hoisted_28 = {
   "class": "index-about"
 };
-var _hoisted_29 = {
+var _hoisted_5 = {
   "class": "container"
 };
 
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("About us");
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("About us");
 
-var _hoisted_31 = ["innerHTML"];
+var _hoisted_7 = ["innerHTML"];
 
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "/about",
   "class": "join-now"
 }, "read more", -1
 /* HOISTED */
 );
 
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "reports"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "container"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
-  "class": "common-head"
-}, "FREE REAL ESTATE REPORTS"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Get exclusive VIP reports to help you with your next purchase or sale and learn how to invest"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" your time and money wisely in the market!")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-  action: "",
-  method: "post",
-  "class": "contact-form"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  placeholder: "First name",
-  name: "name",
-  "class": "form-control",
-  required: ""
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  placeholder: "Phone",
-  name: "phone",
-  "class": "form-control",
-  "data-inputmask": "\"mask\": \"+1 (999) 999-9999\"",
-  "data-mask": "",
-  "data-inputmask-clearincomplete": "true",
-  required: ""
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "email",
-  placeholder: "Email",
-  name: "email",
-  "class": "form-control",
-  required: ""
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "form-control",
-  id: "submit",
-  style: {
-    "color": "white"
-  }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "/assets/img/submit-arrow.svg",
-  alt: ""
-})])])])], -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_H3 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("H3");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"banner\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <img src=\"/assets/img/banner-realty.jpg\" alt=\"\" class=\"img-fluid w-100\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), _hoisted_2, $props.profiles.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.profiles, function (profile, index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: '/profile?name=' + profile.name
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: '/' + profile.cover_photo,
-      alt: "",
-      "class": "img-fluid"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_12)], 8
-    /* PROPS */
-    , _hoisted_11), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: profile.facebook,
-      target: "_blank"
-    }, _hoisted_16, 8
-    /* PROPS */
-    , _hoisted_14)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: profile.twitter,
-      target: "_blank"
-    }, _hoisted_19, 8
-    /* PROPS */
-    , _hoisted_17)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: profile.linkedin,
-      target: "_blank"
-    }, _hoisted_22, 8
-    /* PROPS */
-    , _hoisted_20)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: profile.instagram,
-      target: "_blank"
-    }, _hoisted_25, 8
-    /* PROPS */
-    , _hoisted_23)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(profile.name), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(profile.designation), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: 'tel:' + profile.phone,
-      "class": "phone"
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.mask(profile.phone)), 9
-    /* TEXT, PROPS */
-    , _hoisted_27)])])]);
-  }), 256
-  /* UNKEYED_FRAGMENT */
-  ))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_H3, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_H3, {
     "class": "common-head"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_30];
+      return [_hoisted_6];
     }),
     _: 1
     /* STABLE */
@@ -19698,7 +19539,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     innerHTML: $options.strabout($props.site_details.about_us)
   }, null, 8
   /* PROPS */
-  , _hoisted_31)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_32])]), _hoisted_33]);
+  , _hoisted_7)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_8])])]);
 }
 
 /***/ }),

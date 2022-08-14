@@ -1,19 +1,7 @@
 <template>
      <div class="index">
-        <!--        <div class="banner">-->
-        <!--            <img src="/assets/img/banner-realty.jpg" alt="" class="img-fluid w-100">-->
-        <!--        </div>-->
-        <div class="banner-five">
-            <div class="owl-carousel owl-theme banner-slider-five">
-                <div class="item" style="background-image: url('/assets/img/banner1.jpg')">
-                </div>
-                <div class="item" style="background-image: url('/assets/img/banner2.jpg')">
-                </div>
-                <div class="item" style="background-image: url('/assets/img/banner3.jpg')">
-                </div>
-            </div>
-
-
+        <div class="banner">
+            <img src="/assets/img/banner-realty.jpg" alt="" class="img-fluid w-100">
         </div>
         <div class="container">
             <h3 class="common-head">FEATURED <span style="color:red;">PROFILES</span></h3>
@@ -29,88 +17,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team2.jpg" alt="" class="img-thumbn">
-                        <h3 class="title">Sujil Kumar K.M</h3>
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team3.jpg" alt="">
-                        <h3 class="title">Shruthi S</h3>
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-             <div class="row mt-40">k
-                <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team4.jpg" alt="">
-                        <h3 class="title">Arjun Saji</h3>
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box1"> <img src="/assets/img/our-team5.jpg" alt="" class="img-thumbn">
-                        <h3 class="title">Sujil Kumar K.M</h3>
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="our-team" v-if="profiles.length!=0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 my-auto">
-                        <h3 class="common-head">OUR <span style="color:red;">TEAM</span></h3>
-                    </div>
-                    <!--<div class="col-sm-6 my-auto">
-                        <a href="" class="view-all">view all</a>
-                    </div>-->
-                </div>
-            </div>
-            <div class="left-container">
-                <div class="owl-carousel owl-theme our-team-slider" >
-                    <div class="item" v-for="(profile,index) in profiles">
-                        <div class="team">
-                            <div class="image">
-                                <a :href="'/profile?name='+profile.name">
-                                    <img :src="'/'+profile.cover_photo" alt="" class="img-fluid">
-                                </a>
-                                <ul class="social-media">
-                                    <li><a :href="profile.facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a :href="profile.twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a :href="profile.linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a :href="profile.instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="details">
-                                <h5>{{profile.name}}</h5>
-                                <p>{{profile.designation}}</p>
-                                <a :href="'tel:'+profile.phone" class="phone" >{{mask(profile.phone)}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="index-about">
@@ -120,26 +26,12 @@
                 <a href="/about" class="join-now">read more</a>
             </div>
         </div>
-        <div class="reports">
-            <div class="container">
-                <h3 class="common-head">FREE REAL ESTATE REPORTS</h3>
-                <p>Get exclusive VIP reports to help you with your next purchase or sale and learn how to invest<br>
-                    your
-                    time and money wisely in the market!</p>
-                <form action="" method="post" class="contact-form">
-                    <input type="text" placeholder="First name" name="name" class="form-control" required>
-                    <input type="text" placeholder="Phone" name="phone" class="form-control" data-inputmask='"mask": "+1 (999) 999-9999"' data-mask data-inputmask-clearincomplete="true" required>
-                    <input type="email" placeholder="Email" name="email" class="form-control" required>
-                    <button type="submit" class="form-control" id="submit" style="color:white;"><img src="/assets/img/submit-arrow.svg" alt=""></button>
-                </form>
-            </div>
-        </div>
     </div>
 
 
 </template>
 <script>
-    import 'owl.carousel/dist/assets/owl.carousel.css';
+    import 'owl.carousel/dist//assets/owl.carousel.css';
     import 'owl.carousel';
 
     export default {

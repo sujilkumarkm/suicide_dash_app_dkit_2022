@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>beds copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Specs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Summary-Single-Specs" transform="translate(-65.000000, -747.000000)" fill-rule="nonzero">
+            <g id="Group-39" transform="translate(46.000000, 699.000000)">
+                <g id="PLAN-Copy" transform="translate(19.000000, 48.000000)">
+                    <path d="M0,6.4453125 L22,6.4453125 L22,22 L0,22 L0,6.4453125 Z M1.33203125,7.77734375 L1.33203125,20.796875 L20.6679688,20.796875 L20.6679688,7.77734375 L1.33203125,7.77734375 Z" id="Combined-Shape" fill="#3C4044"></path>
+                    <rect id="Rectangle-2" fill="#FFFFFF" x="7.21875" y="3.8671875" width="14.78125" height="4.3828125"></rect>
+                    <path d="M5.88671875,1.16015625 L7.21875,1.16015625 C7.21875,6.21045022 7.21875,9.14977475 7.21875,9.97812985 C7.21875,11.2206625 5.88671875,11.2206625 5.88671875,9.97812985 C5.88671875,9.14977475 5.88671875,6.21045022 5.88671875,1.16015625 Z" id="Rectangle-3" fill="#3C4044"></path>
+                    <path d="M11.9023438,7.5168457 C11.9023438,6.26000977 13.234375,6.26000977 13.234375,7.5168457 C13.234375,8.77368164 13.234375,11.2121582 13.234375,12.5441895 C13.234375,13.8762207 11.9023438,13.7043457 11.9023438,12.5441895 C11.9023438,11.3840332 11.9023438,8.77368164 11.9023438,7.5168457 Z" id="Rectangle-3-Copy-6" fill="#3C4044"></path>
+                    <rect id="Rectangle-3-Copy-4" fill="#3C4044" x="20.6679688" y="1.16015625" width="1.33203125" height="12.3320312"></rect>
+                    <path d="M5.88671875,16.3295693 C5.88671875,15.2391019 7.21875,15.2391019 7.21875,16.3295693 C7.21875,17.0565476 7.21875,18.9466912 7.21875,22 L5.88671875,22 C5.88671875,18.9466912 5.88671875,17.0565476 5.88671875,16.3295693 Z" id="Rectangle-3-Copy" fill="#3C4044"></path>
+                    <rect id="Rectangle-3-Copy-2" fill="#3C4044" x="5.88671875" y="0" width="16.1132812" height="1.24609375"></rect>
+                    <rect id="Rectangle-3-Copy-5" fill="#3C4044" x="11.9023438" y="9.41015625" width="10.0976562" height="1.24609375"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
