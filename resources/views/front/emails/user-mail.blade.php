@@ -44,8 +44,8 @@
                                                                     colspan="4"
                                                                     style="padding: 5px 0; font-size: 11px;">
                                                                     <a href="mailto:{{$data['site_details']->email_1}}"> {{$data['site_details']->email_1}}</a><br/><a
-                                                                        href="tel:+1{{$data['site_details']->phone_1}}">
-                                                                        +1
+                                                                        href="tel:+353{{$data['site_details']->phone_1}}">
+                                                                        +353
                                                                         ({{substr($data['site_details']->phone_1 ,0,3)}}
                                                                         ) {{substr($data['site_details']->phone_1,3,3)}}
                                                                         -{{substr($data['site_details']->phone_1,6,9)}}</a>

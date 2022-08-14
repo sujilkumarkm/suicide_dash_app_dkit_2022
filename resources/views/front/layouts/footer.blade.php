@@ -19,7 +19,7 @@
                         <ul class="footer-contact">
                             <li>
                                 <h6>CALL</h6>
-                                <a href="tel:+1{{$data['site_details']->phone_1}}">+1 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
+                                <a href="tel:+353{{$data['site_details']->phone_1}}">+353 ({{substr($data['site_details']->phone_1 ,0,3)}}) {{substr($data['site_details']->phone_1,3,3)}}-{{substr($data['site_details']->phone_1,6,9)}}</a>
                             </li>
                             <li></li>
                             <li>

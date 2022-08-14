@@ -119,7 +119,7 @@
         </div>
     </div>
 </div>
-<a href="mailto:{{$data['site_details']->email_1}}" class="chat-icon" ><img src="{{asset('assets/img/wp-icon.png')}}?v0.1" alt="" class="img-fluid"></a>
+<a href="mailto:{{$data['site_details']->email_1}}" class="chat-icon" ><img src="{{asset('assets/img/email-icon.png')}}?v0.1" alt="" class="img-fluid"></a>
 
 @yield('content')
 <footer>

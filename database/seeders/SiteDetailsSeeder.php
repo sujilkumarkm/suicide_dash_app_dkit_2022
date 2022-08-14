@@ -17,8 +17,8 @@ class SiteDetailsSeeder extends Seeder
         SiteDetails::insert([
             'phone_1'=>'0892738178',
             'phone_2'=>'9496959162',
-            'email_1'=>'kmsujilkumar@gmail.com',
-            'email_2'=>'d00242726@student.dkit.ie',
+            'email_1'=>'d00242726@student.dkit.ie',
+            'email_2'=>'kmsujilkumar@gmail.com',
             'address'=>'Dundalk Institute of Technology',
             'whatsapp'=>'0892738178',
             'facebook'=>'https://www.facebook.com/kmsujil',
