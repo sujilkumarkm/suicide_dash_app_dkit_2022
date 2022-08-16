@@ -38,7 +38,7 @@
                         <div class="designed">
                             <div class="logo">
                             <a  href="https://dkit.ie.narayam.net" target="_blank">
-                                <img src="{{asset('assets/img/Dkit_logo_small.jpg')}}" alt="" style="max-width:150px;" class="img-fluid"></a>
+                                <img src="{{asset('assets/img/logo.png')}}" alt="" style="max-width:150px;" class="img-fluid"></a>
                             </div>
                             <!-- <p class="text-center">Designed by Narayam</p> -->
                             <p class="text-center">Trusted listing from narayam</p>

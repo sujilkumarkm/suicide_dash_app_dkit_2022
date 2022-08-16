@@ -3,7 +3,7 @@
 @section('description',$metadata->description)
 @section('keywords',$metadata->keyword)
 @section('nav-class','index sticky-top')
-@section('logo'){{asset('assets/img/Dkit_logo_small.jpg')}}@endsection
+@section('logo'){{asset('assets/img/logo.png')}}@endsection
 @section('content')
     <div class="banner">
         <img src="/assets/img/wall_paper.png" alt="" class="img-fluid w-100">

@@ -3,7 +3,7 @@
 @section('description',$metadata->description)
 @section('keywords',$metadata->keyword)
 @section('nav-class','inner')
-@section('logo'){{asset('assets/img/inner-Dkit_logo_small.jpg')}}@endsection
+@section('logo'){{asset('assets/img/inner-logo.png')}}@endsection
 @section('content')
     <div class="about-us page">
         <div class="page-header">

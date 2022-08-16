@@ -25,7 +25,7 @@
                                             style="vertical-align:middle;padding-top:10px;"
                                             bgcolor="#f8f8f8">
                                             <a href="{{env('APP_URL')}}"><img
-                                                    src="{{asset('assets/img/Dkit_logo_small.jpg')}}"
+                                                    src="{{asset('assets/img/logo.png')}}"
                                                     alt="Suicide Dash App Feedback" height="35" style="display:block"></a>
                                         </td>
                                         <td align="right"

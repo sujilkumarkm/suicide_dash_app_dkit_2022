@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-xl smart-scroll navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="{{asset('assets/img/Dkit_logo_small.jpg')}}" class="img-fluid" style="max-height:80px !important;" alt="Logo">
+            <img src="{{asset('assets/img/logo.png')}}" class="img-fluid" style="max-height:80px !important;" alt="Logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
