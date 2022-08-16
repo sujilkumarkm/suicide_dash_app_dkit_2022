@@ -2,7 +2,7 @@
 
 <x-admin-layout>
     <x-datatable-layout>
-        @section('title','Suicide')
+        @section('title','Suicide Master')
         @section('tableTitle','Suicide')
         @section('createRoute')
             <a class="btn btn-primary btn-sm mr-2" href=" {{route('suicide.create')}}">Add new</a>

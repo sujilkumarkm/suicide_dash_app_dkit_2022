@@ -48,7 +48,15 @@
             </div>
             <div class="form-group">
                 <label for="age" class="control-label">Age</label>
-                <input type="text" id="age" name="age" required class="form-control {{$errors->has('age') ? 'is-invalid' : ''}}" value="{{old('age')}}">
+                <select id="age" name="age" class="form-control {{$errors->has('age') ? 'is-invalid' : ''}}">
+                    <option selected vlaue="">-- Choose --</option>
+                    <option vlaue="75+ Years">75+ Years</option>
+                    <option vlaue="55-74 Years">55-74 Years</option>
+                    <option vlaue="35-54 Years">35-54 Years</option>
+                    <option vlaue="25-34 Years">25-34 Years</option>
+                    <option vlaue="15-24 Years">15-24 Years</option>
+                    <option vlaue="Less than 15 Years">Less than 15 Years</option>
+                  </select>
                 @if($errors->has('age'))
                     <span class="help-block error invalid-feedback">
                         <strong>{{$errors->first('age')}}</strong>
