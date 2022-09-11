@@ -38,6 +38,7 @@ class SuicideController extends Controller
 
         $request->validate([
             'country' => 'required|string|max:255',
+            'country_code' => 'required|string|max:3',
             'year' => 'required|string|max:255',
             'sex' => 'required|string',
             'age' => 'required|string',
@@ -57,6 +58,7 @@ class SuicideController extends Controller
 
         $suicides  = new Suicide();
         $suicides->country = $request->country;
+        $suicides->country_code = $request->country_code;
         $suicides->year = $request->year;
         $suicides->sex = $request->sex;
         $suicides->age = $request->age;
@@ -109,6 +111,7 @@ class SuicideController extends Controller
 
         $request->validate([
             'country' => 'required|string|max:255',
+            'country_code' => 'required|string|max:3',
             'year' => 'required|string|max:255',
             'sex' => 'required|string',
             'age' => 'required|string',
@@ -129,6 +132,7 @@ class SuicideController extends Controller
         $suicide = Suicide::findOrFail($id);
         // dd($suicide);
         $suicide->country = $request->country;
+        $suicide->country_code = $request->country_code;
         $suicide->year = $request->year;
         $suicide->sex = $request->sex;
         $suicide->age = $request->age;

@@ -22,7 +22,15 @@
                     </span>
                 @endif
             </div>
-
+            <div class="form-group">
+                <label for="country_code" class="control-label">Country Code</label>
+                <input type="text" id="country_code" name="country_code" required class="form-control {{$errors->has('country_code') ? 'is-invalid' : ''}}" value="{{old('country_code')}}">
+                @if($errors->has('country_code'))
+                    <span class="help-block error invalid-feedback">
+                        <strong>{{$errors->first('country_code')}}</strong>
+                    </span>
+                @endif
+            </div>
             <div class="form-group">
                 <label for="year" class="control-label">Year</label>
                 <input type="text" id="year" name="year" required class="form-control {{$errors->has('year') ? 'is-invalid' : ''}}" value="{{old('year')}}">
